@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09d98431-6c52-4dee-8f9c-30634a8512ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/build_02/src/styles/reset.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build_02/src/styles/themes/dark.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build_02/src/styles/themes/normal.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build_02/src/styles/variables/global.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build_02/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_02/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build_02/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/build_02/src/styles/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_02/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_02/src/app/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_02/src/app/providers/ThemeProvider/lib/useTheme.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_02/src/app/providers/ThemeProvider/lib/useTheme.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,21 +45,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;test-master-1&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kWX1370968/Desktop/Stuff/code_stuff/codeCarnage&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\kWX1370968\\Desktop\\Stuff\\code_stuff\\codeCarnage\\build_02\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "test3",
+    "last_opened_file_path": "C:/Users/kWX1370968/Desktop/Stuff/code_stuff/codeCarnage",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Users\\kWX1370968\\Desktop\\Stuff\\code_stuff\\codeCarnage\\build_03\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kWX1370968\Desktop\Stuff\code_stuff\codeCarnage\build_02\src\styles" />
@@ -85,7 +81,10 @@
       <option name="presentableId" value="Default" />
       <updated>1727165752666</updated>
       <workItem from="1727165753691" duration="11208000" />
-      <workItem from="1727253398312" duration="7917000" />
+      <workItem from="1727253398312" duration="8748000" />
+      <workItem from="1727340044278" duration="1739000" />
+      <workItem from="1727419201391" duration="3078000" />
+      <workItem from="1727853592480" duration="2781000" />
     </task>
     <servers />
   </component>
