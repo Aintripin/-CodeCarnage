@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09d98431-6c52-4dee-8f9c-30634a8512ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/build_03/src/shared/ui/ThemeSwitcher/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build_03/src/shared/ui/ThemeSwitcher/ui/ThemeSwitcher.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build_03/src/shared/ui/ThemeSwitcher/ui/ThemeSwitcher.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build_03/src/widgets/Sidebar/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build_03/src/widgets/Sidebar/ui/Sidebar/Sidebar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build_03/src/widgets/Sidebar/ui/Sidebar/Sidebar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build_03/config/build/buildLoaders.ts" beforeDir="false" afterPath="$PROJECT_DIR$/build_03/config/build/buildLoaders.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build_03/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/build_03/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build_03/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/build_03/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build_03/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_03/src/app/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build_03/src/app/types/global.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/build_03/src/app/types/global.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build_03/src/widgets/Navbar/ui/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_03/src/widgets/Navbar/ui/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_03/src/widgets/Sidebar/ui/Sidebar/Sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_03/src/widgets/Sidebar/ui/Sidebar/Sidebar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,8 +51,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "test-master-2",
-    "last_opened_file_path": "C:/Users/kWX1370968/Desktop/Stuff/code_stuff/codeCarnage",
+    "git-widget-placeholder": "test-master-3",
+    "last_opened_file_path": "C:/Users/kWX1370968/Desktop/Stuff/code_stuff/codeCarnage/build_04",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -100,6 +89,7 @@
       <workItem from="1727340044278" duration="1739000" />
       <workItem from="1727419201391" duration="3078000" />
       <workItem from="1727853592480" duration="11183000" />
+      <workItem from="1727960277843" duration="4133000" />
     </task>
     <servers />
   </component>
