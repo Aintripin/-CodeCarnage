@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09d98431-6c52-4dee-8f9c-30634a8512ab" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/build_04/src/widgets/Sidebar/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build_04/src/widgets/Sidebar/ui/Sidebar/Sidebar.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build_04/src/widgets/Sidebar/ui/Sidebar/Sidebar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build_03/src/widgets/Sidebar/ui/Sidebar/Sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_03/src/widgets/Sidebar/ui/Sidebar/Sidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_04/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_04/src/app/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_04/src/app/styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/build_04/src/app/styles/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_04/src/app/styles/variables/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/build_04/src/app/styles/variables/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_04/src/widgets/Navbar/ui/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_04/src/widgets/Navbar/ui/Navbar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -48,21 +55,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "test-master-3",
-    "last_opened_file_path": "C:/Users/kWX1370968/Desktop/Stuff/code_stuff/codeCarnage/build_04",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "ts.external.directory.path": "C:\\Users\\kWX1370968\\Desktop\\Stuff\\code_stuff\\codeCarnage\\build_03\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;test-master-3&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kWX1370968/Desktop/Stuff/code_stuff/codeCarnage/build_04&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\kWX1370968\\Desktop\\Stuff\\code_stuff\\codeCarnage\\build_03\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kWX1370968\Desktop\Stuff\code_stuff\codeCarnage\build_03\src\shared\ui" />
@@ -89,7 +96,8 @@
       <workItem from="1727340044278" duration="1739000" />
       <workItem from="1727419201391" duration="3078000" />
       <workItem from="1727853592480" duration="11183000" />
-      <workItem from="1727960277843" duration="4133000" />
+      <workItem from="1727960277843" duration="4827000" />
+      <workItem from="1728035278098" duration="7368000" />
     </task>
     <servers />
   </component>
