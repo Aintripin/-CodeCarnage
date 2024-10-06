@@ -10,7 +10,7 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
     }
 
     const babelLoader = {
-        test: /\.(js | jsx | tsx)$/,
+        test: /\.(js|jsx|tsx)$/,
         exclude: /node_modules/,
         use: {
             loader: "babel-loader",
@@ -20,8 +20,8 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
                     [
                         "i18next-extract",
                         {
-                            locales: ["en", "ru"],
-                            keyAsDefaultValue: true,
+                            locales: ['ru', 'en'],
+                            keyAsDefaultValue: true
                         }
                     ],
                 ]
