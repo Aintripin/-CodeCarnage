@@ -5,15 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09d98431-6c52-4dee-8f9c-30634a8512ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/build_04/src/widgets/Sidebar/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build_04/src/widgets/Sidebar/ui/Sidebar/Sidebar.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build_04/src/widgets/Sidebar/ui/Sidebar/Sidebar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build_06/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build_03/src/widgets/Sidebar/ui/Sidebar/Sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_03/src/widgets/Sidebar/ui/Sidebar/Sidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build_04/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_04/src/app/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build_04/src/app/styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/build_04/src/app/styles/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build_04/src/app/styles/variables/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/build_04/src/app/styles/variables/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build_04/src/widgets/Navbar/ui/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_04/src/widgets/Navbar/ui/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/config/build/buildDevServer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/config/build/buildDevServer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/config/build/buildLoaders.ts" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/config/build/buildLoaders.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/config/build/buildPlugins.ts" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/config/build/buildPlugins.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/config/build/buildResolvers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/config/build/buildResolvers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/config/build/buildWebpackConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/config/build/buildWebpackConfig.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/config/build/types/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/config/build/types/config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/app/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/app/providers/ThemeProvider/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/app/providers/ThemeProvider/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/app/providers/ThemeProvider/lib/ThemeContext.ts" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/app/providers/ThemeProvider/lib/ThemeContext.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/app/providers/ThemeProvider/lib/useTheme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/app/providers/ThemeProvider/lib/useTheme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/app/providers/ThemeProvider/ui/ThemeProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/app/providers/ThemeProvider/ui/ThemeProvider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/app/providers/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/app/providers/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/app/providers/router/ui/AppRouter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/app/providers/router/ui/AppRouter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/app/types/global.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/app/types/global.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/pages/AboutPage/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/pages/AboutPage/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/pages/AboutPage/ui/AboutPage.async.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/pages/AboutPage/ui/AboutPage.async.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/pages/AboutPage/ui/AboutPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/pages/AboutPage/ui/AboutPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/pages/MainPage/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/pages/MainPage/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/pages/MainPage/ui/MainPage.async.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/pages/MainPage/ui/MainPage.async.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/pages/MainPage/ui/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/pages/MainPage/ui/MainPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/shared/config/i18n/i18n.ts" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/shared/config/i18n/i18n.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/shared/config/routeConfig/routeConfig.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/shared/config/routeConfig/routeConfig.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/shared/lib/classNames/classNames.ts" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/shared/lib/classNames/classNames.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/shared/ui/AppLink/AppLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/shared/ui/AppLink/AppLink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/shared/ui/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/shared/ui/Button/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/shared/ui/LangSwitcher/LangSwitcher.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/shared/ui/LangSwitcher/LangSwitcher.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/shared/ui/ThemeSwitcher/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/shared/ui/ThemeSwitcher/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/shared/ui/ThemeSwitcher/ui/ThemeSwitcher.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/shared/ui/ThemeSwitcher/ui/ThemeSwitcher.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/widgets/Navbar/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/widgets/Navbar/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/widgets/Navbar/ui/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/widgets/Navbar/ui/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/widgets/Sidebar/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/widgets/Sidebar/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/widgets/Sidebar/ui/Sidebar/Sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/widgets/Sidebar/ui/Sidebar/Sidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/webpack.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/webpack.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,21 +86,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;test-master-3&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kWX1370968/Desktop/Stuff/code_stuff/codeCarnage/build_04&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\kWX1370968\\Desktop\\Stuff\\code_stuff\\codeCarnage\\build_03\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "test-master-3",
+    "last_opened_file_path": "C:/Users/kWX1370968/Desktop/Stuff/code_stuff/codeCarnage/build_04",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "ts.external.directory.path": "C:\\Users\\kWX1370968\\Desktop\\Stuff\\code_stuff\\codeCarnage\\build_06\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kWX1370968\Desktop\Stuff\code_stuff\codeCarnage\build_03\src\shared\ui" />
@@ -98,6 +131,7 @@
       <workItem from="1727853592480" duration="11183000" />
       <workItem from="1727960277843" duration="4827000" />
       <workItem from="1728035278098" duration="7368000" />
+      <workItem from="1728285405119" duration="11530000" />
     </task>
     <servers />
   </component>
