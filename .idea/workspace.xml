@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="09d98431-6c52-4dee-8f9c-30634a8512ab" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build_06/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build_06/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +51,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "test-master-3",
+    "git-widget-placeholder": "test3",
     "last_opened_file_path": "C:/Users/kWX1370968/Desktop/Stuff/code_stuff/codeCarnage/build_04",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -64,7 +63,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "configurable.stylesheets.stylelint",
-    "ts.external.directory.path": "C:\\Users\\kWX1370968\\Desktop\\Stuff\\code_stuff\\codeCarnage\\build_06\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "C:\\Users\\kWX1370968\\Desktop\\Stuff\\code_stuff\\codeCarnage\\build_03\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
