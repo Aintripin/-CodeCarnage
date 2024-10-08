@@ -5,11 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09d98431-6c52-4dee-8f9c-30634a8512ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/build_06/.stylelintrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_03/src/shared/ui/ThemeSwitcher/ui/ThemeSwitcher.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_03/src/shared/ui/ThemeSwitcher/ui/ThemeSwitcher.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_03/src/shared/ui/ThemeSwitcher/ui/ThemeSwitcher.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/.stylelintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/.stylelintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build_06/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build_06/src/app/styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/app/styles/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/app/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/app/styles/reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/app/styles/reset.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/app/styles/themes/dark.scss" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/app/styles/themes/dark.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/app/styles/themes/normal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/app/styles/themes/normal.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/app/styles/variables/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/app/styles/variables/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/shared/ui/LangSwitcher/LangSwitcher.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/shared/ui/LangSwitcher/LangSwitcher.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/shared/ui/LangSwitcher/LangSwitcher.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/shared/ui/ThemeSwitcher/ui/ThemeSwitcher.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/shared/ui/ThemeSwitcher/ui/ThemeSwitcher.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/shared/ui/ThemeSwitcher/ui/ThemeSwitcher.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_06/src/widgets/Sidebar/ui/Sidebar/Sidebar.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/src/widgets/Sidebar/ui/Sidebar/Sidebar.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +78,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "configurable.stylesheets.stylelint",
-    "ts.external.directory.path": "C:\\Users\\kWX1370968\\Desktop\\Stuff\\code_stuff\\codeCarnage\\build_03\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "C:\\Users\\kWX1370968\\Desktop\\Stuff\\code_stuff\\codeCarnage\\build_06\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -98,7 +110,9 @@
       <workItem from="1727853592480" duration="11183000" />
       <workItem from="1727960277843" duration="4827000" />
       <workItem from="1728035278098" duration="7368000" />
-      <workItem from="1728285405119" duration="14865000" />
+      <workItem from="1728285405119" duration="15166000" />
+      <workItem from="1728376755271" duration="22000" />
+      <workItem from="1728376787062" duration="5300000" />
     </task>
     <servers />
   </component>
