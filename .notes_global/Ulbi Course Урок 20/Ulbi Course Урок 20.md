@@ -40,6 +40,28 @@ rootDir: "../../"
 
 Мы тут указываем `<rootDir>` в строке - это как раз тот самый путь до корня проекта
 
+### `"<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)"`
+
+1. **`<rootDir>`:**
+    
+    - This is a placeholder for the root directory of your project (in your case, defined as `../../`). Jest will replace `<rootDir>` with the actual path to the root directory when it's looking for test files.
+2. **`src/`**:
+    
+    - This specifies that Jest should only look for test files within the `src` folder.
+3. **`**/*`**:
+    
+    - The double asterisk (`**`) is a wildcard that matches any directory, including nested ones. For example, it will search all subdirectories under `src/`.
+    - The single asterisk (`*`) matches any file or folder name, but not slashes. Together, `**/*` matches any files in the `src` directory and its subdirectories.
+4. **`(*.)@(spec|test)`**:
+    
+    - This part in parentheses is saying that the test file can either:
+        - Have a dot (`.`) followed by `spec` or `test`. For example, files like `App.test.js` or `App.spec.tsx` will match.
+        - The `@` symbol is like an OR operator in this glob pattern syntax, so it checks for either `spec` or `test`.
+5. **`.[tj]s?(x)`**:
+    
+    - This part specifies the file extension:
+        - `[tj]s`: It matches `.js` or `.ts` files, where `[tj]` is a character class matching either `t` (for TypeScript) or `j` (for JavaScript).
+        - `?(x)`: This matches an optional `x`, so it can match either `.js`, `.jsx`, `.ts`, or `.tsx` files.
 
 Вернёмся в `package.json`:
 
