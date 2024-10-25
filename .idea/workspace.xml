@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="09d98431-6c52-4dee-8f9c-30634a8512ab" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build_06/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/build_06/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +51,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "test3",
-    "last_opened_file_path": "C:/Users/kWX1370968/Desktop/Stuff/code_stuff/codeCarnage/build_04",
+    "last_opened_file_path": "C:/Users/kWX1370968/Desktop/Stuff/code_stuff",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.stylelint": "true",
@@ -98,6 +97,7 @@
       <workItem from="1728285405119" duration="15166000" />
       <workItem from="1728376755271" duration="22000" />
       <workItem from="1728376787062" duration="6275000" />
+      <workItem from="1728457217789" duration="795000" />
     </task>
     <servers />
   </component>
