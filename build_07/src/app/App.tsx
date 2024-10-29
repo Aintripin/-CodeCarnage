@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, {Suspense, useEffect} from 'react';
 import './styles/index.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTheme } from 'app/providers/ThemeProvider';
@@ -8,6 +8,12 @@ import { Sidebar } from 'widgets/Sidebar';
 
 function App() {
     const { theme } = useTheme();
+
+    useEffect(() => {
+        if (Math.random() < 0.5) {
+            throw new Error();
+        }
+    }, []);
 
     return (
         <div className={classNames('app', {}, [theme])}>

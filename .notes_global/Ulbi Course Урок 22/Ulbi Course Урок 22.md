@@ -77,15 +77,97 @@ https://legacy.reactjs.org/docs/error-boundaries.html
 ![[Pasted image 20241028171720.png]]
 
 
+В целом, при попытке осуществить the American Dream, пока что вот так:
+
+![[Pasted image 20241029150827.png]]
+
+По итогу:
+
+> `ErrorBoundary.tsx`:
+
+```TSX:
+import React, { ReactNode } from 'react';  
+import {withTranslation} from "react-i18next";  
+  
+interface ErrorBoundaryProps {  
+    children: ReactNode;  
+}  
+  
+interface ErrorBoundaryState {  
+    hasError: boolean;  
+}  
+  
+class ErrorBoundary  
+    extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {  
+    constructor(props: ErrorBoundaryProps) {  
+        super(props);  
+        this.state = { hasError: false };  
+    }  
+  
+    static getDerivedStateFromError(error: Error) {  
+        return { hasError: true };  
+    }  
+  
+    componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {  
+        console.log(error, errorInfo);  
+    }  
+  
+    render() {  
+        const { hasError } = this.state;  
+        const { children } = this.props;  
+        if (hasError) {  
+            return <h1>Something went wrong</h1>;  
+        }  
+  
+        return children;  
+    }  
+}  
+  
+// export default withTranslation()(ErrorBoundary);  
+export default ErrorBoundary;
+```
+
 Теперь импортируем всё это в PublicAPI
 
 
 ![[Pasted image 20241028172018.png]]
 
+> `index.ts`:
+
+```TS:
+import ErrorBoundary from './ui/ErrorBoundary';  
+  
+export {  
+    ErrorBoundary,  
+};
+```
 
 Теперь корневой компонент `index.tsx` обвернём в `errorBoundary`:
 
 ![[Pasted image 20241028172057.png]]
+
+> `index.tsx`:
+
+```TSX:
+import { render } from 'react-dom';  
+import { BrowserRouter } from 'react-router-dom';  
+import { ThemeProvider } from 'app/providers/ThemeProvider';  
+import ErrorBoundary from 'app/providers/ErrorBoundary/ui/ErrorBoundary';  
+import App from './app/App';  
+  
+import './shared/config/i18n/i18n';  
+  
+render(  
+    <BrowserRouter>  
+        <ErrorBoundary>            
+	        <ThemeProvider>                
+		        <App />            
+	        </ThemeProvider>        
+        </ErrorBoundary>    
+    </BrowserRouter>,  
+    document.getElementById('root'),  
+);
+```
 
 Теперь, если чё, у нас выбрасывает ошибку вот так:
 
@@ -104,6 +186,36 @@ https://legacy.reactjs.org/docs/error-boundaries.html
 Создадим функцию с кнопкой, с помощью которой будем перезагружать страницу:
 
 ![[Pasted image 20241028172603.png]]
+
+По итогу имеем:
+
+> `ErrorPage.tsx`:
+
+```TSX:
+import { classNames } from 'shared/lib/classNames/classNames';  
+import { useTranslation } from 'react-i18next';  
+import cls from './ErrorPage.module.scss';  
+  
+interface ErrorPageProps {  
+    className?: string;  
+}  
+  
+export const ErrorPage = ({ className }: ErrorPageProps) => {  
+    const { t } = useTranslation();  
+  
+    const reloadPage = () => {  
+        location.reload();  
+    };  
+  
+    return (  
+        <div className={classNames(cls.ErrorPage, {}, [className])}>  
+            <p>{t("Hol' on, wait a minute, some' ain't right!")}</p>  
+            <Button onClick={reloadPage}>  
+                {t('Обновить страницу')}  
+            </Button>  
+        </div>    );  
+};
+```
 
 Теперь остаётся компонент вернуть из `errorBoundary`:
 
@@ -128,12 +240,88 @@ https://legacy.reactjs.org/docs/error-boundaries.html
 
 ![[Pasted image 20241029120637.png]]
 
+> `ErrorPage.tsx`:
+
+```TSX:
+import { classNames } from 'shared/lib/classNames/classNames';  
+import { useTranslation } from 'react-i18next';  
+import { Button } from 'shared/ui/Button/Button';  
+import cls from './ErrorPage.module.scss';  
+  
+interface ErrorPageProps {  
+    className?: string;  
+}  
+  
+export const ErrorPage = ({ className }: ErrorPageProps) => {  
+    const { t } = useTranslation();  
+  
+    const reloadPage = () => {  
+        // eslint-disable-next-line no-restricted-globals  
+        location.reload();  
+    };  
+  
+    return (  
+        <div className={classNames(cls.ErrorPage, {}, [className])}>  
+            <p>{t("Hol' on, wait a minute, some' ain't right!")}</p>  
+            <Button onClick={reloadPage}>  
+                {t('Обновить страницу')}  
+            </Button>  
+        </div>    );  
+};
+```
 
 Щас будем это дело стилизовать:
 
 ![[Pasted image 20241029121622.png]]
 
 Т.е выравниваем по горизонтали и вертикали
+
+> `ErrorBoundary.tsx`:
+
+```TSX:
+import React, {ReactNode, Suspense} from 'react';  
+import {withTranslation} from "react-i18next";  
+import {ErrorPage} from "widgets/ErrorPage/ui/ErrorPage";  
+  
+interface ErrorBoundaryProps {  
+    children: ReactNode;  
+}  
+  
+interface ErrorBoundaryState {  
+    hasError: boolean;  
+}  
+  
+class ErrorBoundary  
+    extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {  
+    constructor(props: ErrorBoundaryProps) {  
+        super(props);  
+        this.state = { hasError: false };  
+    }  
+  
+    static getDerivedStateFromError(error: Error) {  
+        return { hasError: true };  
+    }  
+  
+    componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {  
+        console.log(error, errorInfo);  
+    }  
+  
+    render() {  
+        const { hasError } = this.state;  
+        const { children } = this.props;  
+        if (hasError) {  
+            return (  
+                <Suspense fallback="">  
+                    <ErrorPage />                </Suspense>            );  
+        }  
+  
+        return children;  
+    }  
+}  
+  
+// export default withTranslation()(ErrorBoundary);  
+export default ErrorBoundary;
+```
 
 Вернёмся в `App.tsx` и уберём `useEffect`, который пробрасывает ошибку:
 
@@ -148,6 +336,34 @@ https://legacy.reactjs.org/docs/error-boundaries.html
 ![[Pasted image 20241029122222.png]]
 
 Щас `i18` будет выёбываться, что мы не добавили перевод. Посылаем нахуй, т.к. компонент тестовый и нам поебать, мы удалим
+
+> `BugButton.tsx`:
+
+```TSX:
+import { classNames } from 'shared/lib/classNames/classNames';  
+import { Button } from 'shared/ui/Button/Button';  
+import { useEffect, useState } from 'react';  
+  
+interface BugButtonProps {  
+    className?: string;  
+}  
+  
+export const BugButton = ({ className }: BugButtonProps) => {  
+    const [error, setError] = useState(false);  
+  
+    const onThrow = () => setError(true);  
+  
+    useEffect(() => {  
+        throw new Error();  
+    }, [error]);  
+  
+    return (  
+        <Button onClick={onThrow}>  
+            throw some hands  
+        </Button>  
+    );  
+};
+```
 
 
 Добавим теперь в publicAPI:
@@ -188,4 +404,33 @@ https://legacy.reactjs.org/docs/error-boundaries.html
 
 
 Сам компонент `BugButton.tsx` у нас без пропсов, потому интерфейс щас удалим
+
+> `MainPage.tsx`:
+
+```TSX:
+import { Button } from 'shared/ui/Button/Button';  
+import { useEffect, useState } from 'react';  
+import { useTranslation } from 'react-i18next';  
+  
+// Чисто компонент для тестирования  
+export const BugButton = () => {  
+    const [error, setError] = useState(false);  
+    const { t } = useTranslation();  
+  
+    const onThrow = () => setError(true);  
+  
+    useEffect(() => {  
+        if (error) {  
+            throw new Error();  
+        }  
+    }, [error]);  
+  
+    return (  
+        // eslint-disable-next-line i18next/no-literal-string  
+        <Button onClick={onThrow}>  
+            {t('throw some hands')}  
+        </Button>  
+    );  
+};
+```
 
