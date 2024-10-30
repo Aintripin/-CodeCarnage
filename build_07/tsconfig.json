@@ -35,7 +35,11 @@
   },
   "ts-node": {
     "compilerOptions": {
+      "esModuleInterop": true,
       "module": "CommonJS"
     }
-  }
+  },
+  "include": [
+    "./config/jest/setupTests.ts"
+  ]
 }

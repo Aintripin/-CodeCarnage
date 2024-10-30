@@ -31,7 +31,7 @@ npm i -D @testing-library/react@12.1.3
 Поэтому поставим это:
 
 ```BASH:
-npm i -D @testing-library/jest-dom
+npm i -D @testing-library/jest-dom@5.16.2
 ```
 
 Далее создадим `setupTests.ts`:
@@ -51,7 +51,7 @@ npm i -D @testing-library/jest-dom
 
 ![[Pasted image 20241029230515.png]]
 
-Щас нам нужно сделать так, чтоблы та конфигурация, которую мы написали, работал с TS. Сделаем это вот так:
+Щас нам нужно сделать так, чтобы та конфигурация, которую мы написали, работал с TS. Сделаем это вот так:
 
 ![[Pasted image 20241029230628.png]]
 
@@ -157,6 +157,12 @@ npm run unit Button.test.tsx
 
 ![[Pasted image 20241029232717.png]]
 
+> `setupTests.ts`:
+
+```TSX:
+import "@testing-library/jest-dom";
+```
+
 Попробуем запустить тесты ещё раз:
 
 ```BASH:
@@ -176,6 +182,32 @@ npm run unit Button.test.tsx
 > `Button.test.tsx`:
 
 ![[Pasted image 20241030103034.png]]
+
+> `Button.test.tsx`:
+
+```TSX:
+import { render, screen } from '@testing-library/react';  
+import { Button, ThemeButton } from 'shared/ui/Button/Button';  
+  
+describe('classnames', () => {  
+    test('Test render', () => {  
+        render(<Button>TEST</Button>);  
+        expect(screen.getByText('TEST')).toBeInTheDocument();  
+    });  
+  
+    test('with only first param', () => {  
+        render(<Button theme={ThemeButton.CLEAR}>TEST</Button>);  
+        expect(screen.getByText('TEST')).toHaveClass('clear');  
+        screen.debug();  
+    });  
+});
+```
+
+```BASH:
+npm run unit Button.test.ts
+```
+
+![[Pasted image 20241030151341.png]]
 
 Щас напишем тест на что-то белее сложное, это будет для `Sidebar`
 
