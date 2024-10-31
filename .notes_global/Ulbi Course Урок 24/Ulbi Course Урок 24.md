@@ -285,6 +285,15 @@ npm i -D regenerator-runtime@0.13.9
 npm run unit Sidebar.tsx
 ```
 
+
+У меня, после двух дней ебли с проектом и битьём головой об стену, наконец-то стало всё работать. 
+
+# ДЕЛО БЫЛО В ЕБАНОЙ ТОЧКЕ!!!!!!!!!!!
+
+![[Pasted image 20241031144025.png]]
+
+Е-БА-НУТЬ-СЯ, БЛЯДЬ
+
 Тест проходит успешно, он зелёный, но у нас ругается на использование `useTranslation`:
 
 ![[Pasted image 20241030105718.png]]
@@ -302,6 +311,19 @@ npm run unit Sidebar.tsx
 
 ![[Pasted image 20241030110242.png]]
 
+```TSX:
+import { render, screen } from '@testing-library/react';  
+import { Sidebar } from 'widgets/Sidebar/ui/Sidebar/Sidebar';  
+import { withTranslation } from 'react-i18next';  
+  
+describe('Sidebar', () => {  
+    test('Test render', () => {  
+        const SidebarWithTranslation = withTranslation()(Sidebar);  
+        render(<SidebarWithTranslation />);  
+        expect(screen.getByTestId('sidebar')).toBeInTheDocument();  
+    });  
+});
+```
 
 Терь тесты проходят всё также успешно, но мы получаем другой warning:
 
@@ -326,6 +348,28 @@ npm run unit Sidebar.tsx
 
 ![[Pasted image 20241030111018.png]]
 
+`i18nForTests.ts`:
+
+```TSX:
+import i18n from 'i18next';  
+import { initReactI18next } from 'react-i18next';  
+  
+i18n  
+    .use(initReactI18next)  
+    .init({  
+        lng: 'ru',  
+        fallbackLng: 'ru',  
+  
+        debug: false,  
+        interpolation: {  
+            escapeValue: false, // not needed for react!!  
+        },  
+  
+        resources: { ru: { translations: {} } },  
+    });  
+  
+export default i18n;
+```
 
 Чтобы не делать импорт этого файла абсолютно в каждый тест, сделаем helper
 
@@ -343,6 +387,23 @@ ESLint ругался на длину строки, поэтому сделал�
 
 ![[Pasted image 20241030111443.png]]
 
+`Sidebar.test.tsx`:
+
+```TSX:
+import { render, screen } from '@testing-library/react';  
+import { Sidebar } from 'widgets/Sidebar/ui/Sidebar/Sidebar';  
+import {  
+    renderWithTranslation,  
+} from 'shared/lib/tests/renderWithTranslation/renderWIthTranslation';  
+  
+describe('Sidebar', () => {  
+    test('Test render', () => {  
+        renderWithTranslation(<Sidebar />);  
+        expect(screen.getByTestId('sidebar')).toBeInTheDocument();  
+    });  
+});
+```
+
 Теперь напишем тест на сворачивание и разворачивание sidebar'а. Повесим для этого на кнопку, с помощью которой мы разворачиваем и сворачиваем sidebar `data-testid`: 
 
 > `SideBar.tsx`:
@@ -350,6 +411,41 @@ ESLint ругался на длину строки, поэтому сделал�
 ![[Pasted image 20241030111641.png]]
 
 У нас ругается сейчас плагин, который мы добавляли, на то, что перевода для `sidebar-toggle` нет
+
+```TSX:
+import { classNames } from 'shared/lib/classNames/classNames';  
+import { useState } from 'react';  
+import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';  
+import { LangSwitcher } from 'shared/ui/LangSwitcher/LangSwitcher';  
+import { Button } from 'shared/ui/Button/Button';  
+import cls from './Sidebar.module.scss';  
+  
+interface SidebarProps {  
+    className?: string;  
+}  
+  
+export const Sidebar = ({ className }: SidebarProps) => {  
+    const [collapsed, setCollapsed] = useState(false);  
+  
+    const onToggle = () => {  
+        setCollapsed((prev) => !prev);  
+    };  
+  
+    return (  
+        <div  
+            data-testid="sidebar"  
+            className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}  
+        >  
+            <Button                data-testid="sidebar-toggle"  
+                onClick={onToggle}  
+            >  
+                toggle  
+            </Button>  
+            <div className={cls.switchers}>  
+                <ThemeSwitcher />                <LangSwitcher className={cls.lang} />  
+            </div>        </div>    );  
+};
+```
 
 И теперь в тестах для этой кнопки, будем получать её с помощью тестового ID'шника:
 
@@ -388,4 +484,5 @@ ESLint ругался на длину строки, поэтому сделал�
 
 
 Теперь в тестовых файлах по типу `Button.test.tsx` проблемы с переводами больше нет
+
 
