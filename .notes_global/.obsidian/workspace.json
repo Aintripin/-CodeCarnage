@@ -34,9 +34,23 @@
               "icon": "lucide-file",
               "title": "Ulbi Course Урок 24"
             }
+          },
+          {
+            "id": "8c48767cbba92e3e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Ulbi Course Урок 25/Ulbi Course Урок 25.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Ulbi Course Урок 25"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -177,19 +191,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3a993f7448bbd09e",
+  "active": "8c48767cbba92e3e",
   "lastOpenFiles": [
+    "Pasted image 20241101160552.png",
+    "Pasted image 20241101160331.png",
+    "Pasted image 20241101155926.png",
+    "Pasted image 20241101155823.png",
+    "Pasted image 20241101155526.png",
+    "Pasted image 20241101155211.png",
+    "Pasted image 20241101155118.png",
+    "Pasted image 20241101154618.png",
+    "Pasted image 20241101154605.png",
+    "Pasted image 20241101154454.png",
+    "Pasted image 20241101154233.png",
+    "Ulbi Course Урок 25/Ulbi Course Урок 25.md",
     "Ulbi Course Урок 24/Ulbi Course Урок 24.md",
-    "Pasted image 20241031144025.png",
-    "Ulbi Course Урок 24/imgs/Pasted image 20241030151341.png",
-    "Ulbi Course Урок 24/imgs/Pasted image 20241030103034.png",
-    "Ulbi Course Урок 24/imgs/Pasted image 20241030113140.png",
-    "Ulbi Course Урок 24/imgs/Pasted image 20241030112722.png",
-    "Ulbi Course Урок 24/imgs/Pasted image 20241030112534.png",
-    "Ulbi Course Урок 24/imgs/Pasted image 20241030112135.png",
-    "Ulbi Course Урок 24/imgs/Pasted image 20241030112017.png",
-    "Ulbi Course Урок 24/imgs/Pasted image 20241030111641.png",
-    "Ulbi Course Урок 24/imgs/Pasted image 20241030111443.png",
+    "Ulbi Course Урок 25/imgs",
+    "Ulbi Course Урок 25",
     "Ulbi Course Урок 20/Ulbi Course Урок 20.md",
     "Ulbi Course Урок 23/Ulbi Course Урок 23.md",
     "Ulbi Course Урок 24/imgs",
@@ -201,8 +219,6 @@
     "Ulbi Course Урок 22/imgs",
     "Ulbi Course Урок 22",
     "Ulbi Course Урок 21/imgs",
-    "Ulbi Course Урок 21",
-    "Ulbi Course Урок 20/imgs",
-    "Ulbi Course Урок 20"
+    "Ulbi Course Урок 21"
   ]
 }
