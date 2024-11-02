@@ -5,7 +5,53 @@ npm run lint:ts
 ```
 
 
+![[8d086051017a1293b1ce5dddd13cd32d.gif]]
+
+![[Pasted image 20241102145844.png]]
+
+В общем, пробовал вот это всё:
+
+```BASH:
+npm uninstall eslint-plugin-storybook
+npm install -D eslint-plugin-storybook
+```
+
+```BASH:
+rm -rf node_modules
+npm cache clean --force
+npm install
+```
+
+```BASH:
+npm uninstall eslint-plugin-storybook
+```
+
+```BASH:
+npm install -D eslint-plugin-storybook@latest
+```
+
+```BASH:
+npm uninstall eslint-plugin-storybook storybook @storybook/react @storybook/react-webpack5 @storybook/addon-essentials @storybook/addon-interactions @storybook/addon-onboarding @storybook/blocks @storybook/test
+```
+
+```BASH:
+npm cache clean --force
+```
+
+```BASH:
+npx storybook@latest init
+npm install -D eslint-plugin-storybook@latest
+```
+
+- + менял конфиг `.eslintrc.js`
+
+Из этого всего помогло ровно ничего
+
+
+
 можем обнаружить, что на пропс `to`:
+
+> `Navbar.tsx`:
 
 ![[Pasted image 20241101100929.png]]
 Оно ругается - не хватает переводов
@@ -34,15 +80,114 @@ npm run lint:ts
 
 Эта проблема ушла (с импортами):
 
+> `Navbar.tsx`:
+
 ![[Pasted image 20241101102051.png]]
 
 #### Теперь вернёмся на проблему с пропсами, конкретно `to`
 
 ![[Pasted image 20241101100929.png]]
 
+> `Navbar.tsx`:
+
+```TSX:
+import { classNames } from 'shared/lib/classNames/classNames';  
+import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';  
+import { useTranslation } from 'react-i18next';  
+import cls from './Navbar.module.scss';  
+  
+interface NavbarProps {  
+    className?: string;  
+}  
+  
+export const Navbar = ({ className }: NavbarProps) => {  
+    const { t } = useTranslation();  
+  
+    return (  
+        <div className={classNames(cls.Navbar, {}, [className])}>  
+            <div className={cls.links}>  
+                <AppLink theme={AppLinkTheme.SECONDARY} to="/" className={cls.mainLink}>  
+                    {t('Главная')}  
+                </AppLink>  
+                <AppLink theme={AppLinkTheme.RED} to="/about">  
+                    {t('О сайте')}  
+                </AppLink>  
+            </div>        </div>    );  
+};
+```
+
 Это фиксится в `.eslintrc.js`:
 
 ![[Pasted image 20241101102311.png]]
+
+> `.eslintrc.js`:
+
+```JS:
+module.exports = {  
+    env: {  
+        browser: true,  
+        es2021: true,  
+        jest: true,  
+    },  
+    extends: [  
+        'plugin:react/recommended',  
+        'airbnb',  
+        'plugin:i18next/recommended',  
+    ],  
+    parser: '@typescript-eslint/parser',  
+    parserOptions: {  
+        ecmaFeatures: {  
+            jsx: true,  
+        },  
+        ecmaVersion: 'latest',  
+        sourceType: 'module',  
+    },  
+    plugins: [  
+        'react',  
+        '@typescript-eslint',  
+        'i18next',  
+    ],  
+    rules: {  
+        'react/jsx-indent': [2, 4],  
+        'react/jsx-indent-props': [2, 4],  
+        indent: [2, 4],  
+        'react/jsx-filename-extension': [  
+            2,  
+            { extensions: ['.js', '.jsx', '.tsx'] },  
+        ],  
+        'import/no-unresolved': 'off',  
+        'import/prefer-default-export': 'off',  
+        'no-unused-vars': 'warn',  
+        'react/require-default-props': 'off',  
+        'react/react-in-jsx-scope': 'off',  
+        'react/jsx-props-no-spreading': 'warn',  
+        'react/function-component-definition': 'off',  
+        'no-shadow': 'off',  
+        'import/extensions': 'off',  
+        'import/no-extraneous-dependencies': 'off',  
+        'no-underscore-dangle': 'off',  
+        'i18next/no-literal-string': [  
+            'error',  
+            {  
+                markupOnly: true,  
+                ignoreAttribute: ['data-testid', 'to'],  
+            },  
+        ],  
+        'max-len': ['error', { ignoreComments: true, code: 100 }],  
+    },  
+    globals: {  
+        __IS_DEV__: true,  
+    },  
+    overrides: [  
+        {  
+            files: ['**/src/**/*.test.{ts,tsx}'],  
+            rules: {  
+                'i18next/no-literal-string': 'off',  
+            },  
+        },  
+    ],  
+};
+```
 
 И, если мы запустим linter ещё раз:
 
@@ -164,7 +309,7 @@ npm run storybook
 По сути, большинство stories - это просто copy/paste'а и переписывание пропсов, которые мы хотим передать в компоненты 
 
 
-Откроем `Button.test.tsx`:
+Откроем `Button.stories.tsx`:s
 
 Поудаляем комментарии, чтобы кода было поменьше.
 
