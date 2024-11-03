@@ -377,6 +377,29 @@ npm run storybook
 
 ![[Pasted image 20241101152601.png]]
 
+> `webpack.config.ts`:
+
+```TSX:
+import webpack from "webpack";  
+import { BuildPaths } from "../build/types/config";  
+import path from "path";  
+  
+export default ({ config }: {config: webpack.Configuration}) => {  
+    const paths: BuildPaths = {  
+        build: '',  
+        html: '',  
+        entry: '',  
+        src: path.resolve(__dirname,  '..', '..' ,'src'),  
+    };  
+    config.resolve.modules.push(paths.src);  
+    config.resolve.extensions.push('.ts', '.tsx');  
+  
+  
+  
+    return config;  
+}
+```
+
 Щас попробуем ещё раз ёбнуть:
 
 ```BASH:

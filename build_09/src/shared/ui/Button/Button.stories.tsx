@@ -3,21 +3,20 @@ import { fn } from '@storybook/test';
 
 import { Button } from './Button';
 
-const meta: Meta<typeof Button> = {
+export default {
     title: 'shared/Button',
     component: Button,
-    parameters: {
-        layout: 'centered',
-    },
-    tags: ['autodocs'],
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    args: { onClick: fn() },
-};
+} as ComponentMeta<typeof Button>;
 
-export default meta;
-type Story = StoryObj<typeof Button>;
+const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+
+export const Primary = Template.bind({})
+
+// export default meta;
+// type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
     args: {

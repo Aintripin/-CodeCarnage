@@ -1,14 +1,18 @@
 import webpack from "webpack";
+import { BuildPaths } from "../build/types/config";
+import path from "path";
 
 export default ({ config }: {config: webpack.Configuration}) => {
-    const paths: buildPaths = {
+    const paths: BuildPaths = {
         build: '',
         html: '',
         entry: '',
-        src: path.resolve(__dirname,  '..', '..' ,'src'),
+        src: path.resolve(__dirname,  '..', '..', 'src'),
     };
     config.resolve.modules.push(paths.src);
     config.resolve.extensions.push('.ts', '.tsx');
+
+
 
     return config;
 }
