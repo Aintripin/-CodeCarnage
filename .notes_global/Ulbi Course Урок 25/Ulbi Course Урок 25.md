@@ -309,13 +309,39 @@ npm run storybook
 По сути, большинство stories - это просто copy/paste'а и переписывание пропсов, которые мы хотим передать в компоненты 
 
 
-Откроем `Button.stories.tsx`:s
+Откроем `Button.stories.tsx`:
 
 Поудаляем комментарии, чтобы кода было поменьше.
 
 Потом заменим название сториса:
 
 ![[Pasted image 20241101123959.png]]
+
+>`Button.stories.tsx`:
+
+```TSX:
+import type { Meta, StoryObj } from '@storybook/react';  
+import { fn } from '@storybook/test';  
+  
+import { Button } from './Button';  
+  
+export default {  
+    title: 'shared/Button',  
+    component: Button,  
+    argTypes: {  
+        backgroundColor: { control: 'color' },  
+    },  
+} as ComponentMeta<typeof Button>;  
+  
+const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;  
+  
+export const Primary = Template.bind({});  
+  
+Primary.args = {  
+primary: true,  
+label: 'Button',  
+}
+```
 
 Попробуем:
 
@@ -489,3 +515,61 @@ npm run storybook
 
 > `Button.stories.tsx`:
 
+```TSX:
+import type { Meta, StoryObj } from '@storybook/react';  
+import { fn } from '@storybook/test';  
+  
+import { Button } from './Button';  
+  
+export default {  
+    title: 'shared/Button',  
+    component: Button,  
+    argTypes: {  
+        backgroundColor: { control: 'color' },  
+    },  
+} as ComponentMeta<typeof Button>;  
+  
+const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;  
+  
+export const Primary = Template.bind({});  
+  
+Primary.args = {  
+primary: true,  
+label: 'Button',  
+}
+```
+
+
+Тут у нас щас выскакивает вот это:
+
+![[Pasted image 20241102234015.png]]
+
+Типо, для работы с `scss`-файлами нам нужны loader'ы
+
+#### На [stackoverflow](https://stackoverflow.com/questions/59761361/storybook-ui-with-css-modules-and-less):
+
+![[Pasted image 20241102234341.png]]
+
+```TSX:
+module.exports = {
+    module: {
+        rules: [
+            {
+                test: /\.css$/i,
+                use: ['style-loader'],
+            }, {
+                test: /\.css$/,
+                use: {
+                    loader: "css-loader",
+                    options: {
+                        modules: true,
+                    }
+                }
+            }
+        ],
+    },
+}
+```
+
+
+10:40

@@ -28,7 +28,8 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
         },
     };
 
-    const cssLoader =
+    // ! надо закончить
+    // const cssLoader =
 
     // Если не используем тайпскрипт - нужен babel-loader
     const typescriptLoader = {
@@ -51,6 +52,6 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
         svgLoader,
         babelLoader,
         typescriptLoader,
-        cssLoader,
+        // cssLoader,
     ];
 }
