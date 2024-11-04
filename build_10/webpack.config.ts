@@ -17,14 +17,21 @@ export default (env: BuildEnv) => {
     const isDev = mode === 'development';
 
     const config: webpack.Configuration = {
-        ...buildWebpackConfig({
-            mode,
-            paths,
-            isDev,
-            port: PORT,
-        }),
+        mode,
+        entry: paths.entry,
+        output: {
+            filename: '[name].[contenthash].js',
+            path: paths.build,
+            clean: true,
+            publicPath: '/',
+        },
         module: {
             rules: [
+                {
+                    test: /\.(ts|tsx)$/,
+                    use: 'ts-loader',
+                    exclude: /node_modules/,
+                },
                 {
                     test: /\.s[ac]ss$/i,
                     use: [
@@ -59,13 +66,25 @@ export default (env: BuildEnv) => {
             }),
         ],
         resolve: {
-            extensions: ['.tsx', '.ts', '.js'],
+            extensions: ['.tsx', '.ts', '.js', '.jsx'],
             preferAbsolute: true,
             modules: [paths.src, 'node_modules'],
             mainFiles: ['index'],
             alias: {
                 '@': paths.src,
+                'app': path.resolve(__dirname, 'src/app'),
+                'shared': path.resolve(__dirname, 'src/shared'),
+                'entities': path.resolve(__dirname, 'src/entities'),
+                'features': path.resolve(__dirname, 'src/features'),
+                'widgets': path.resolve(__dirname, 'src/widgets'),
+                'pages': path.resolve(__dirname, 'src/pages'),
             },
+        },
+        devServer: {
+            port: PORT,
+            open: true,
+            historyApiFallback: true,
+            hot: true,
         },
     };
 
