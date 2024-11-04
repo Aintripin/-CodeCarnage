@@ -290,7 +290,7 @@ npm run unit Sidebar.tsx
 
 # ДЕЛО БЫЛО В ЕБАНОЙ ТОЧКЕ!!!!!!!!!!!
 
-![[Pasted image 20241031144025.png]]
+![[Ulbi Course Урок 25/imgs/Pasted image 20241031144025.png]]
 
 Е-БА-НУТЬ-СЯ, БЛЯДЬ
 
