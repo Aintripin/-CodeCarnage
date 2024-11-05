@@ -15,7 +15,7 @@
     // Для абсолютного импорта
     "baseUrl": ".",
     "paths": {
-      "*": ["./src/*"],
+      "*": ["./src/*"]
     },
     // esModuleInterop позволяет работать с пакетами, которые используют
     // common js как с обычными пакета с помощью import (require() module.export) = common js
@@ -40,8 +40,7 @@
   },
   "include": [
     "./config/jest/setupTests.ts",
-    "./src/**/*.{ts,tsx}",
-//    "./src/**/*.ts",
-//    "./src/**/*.tsx",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
   ]
 }
