@@ -72,9 +72,19 @@
               "icon": "lucide-file",
               "title": "Ulbi Course Урок 25"
             }
+          },
+          {
+            "id": "00d6a1742a06c81a",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -215,33 +225,36 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ff86f0e0610aba63",
+  "active": "00d6a1742a06c81a",
   "lastOpenFiles": [
-    "Ulbi Course Урок 25/imgs/Pasted image 20241102145844.png",
-    "Ulbi Course Урок 25/imgs/8d086051017a1293b1ce5dddd13cd32d.gif",
-    "Ulbi Course Урок 25/imgs/Pasted image 20241101155823.png",
-    "Ulbi Course Урок 25/Ulbi Course Урок 25.md",
-    "Ulbi Course Урок 25/imgs/Pasted image 20241102145712.png",
-    "Ulbi Course Урок 25/imgs/Pasted image 20241101160552.png",
-    "Ulbi Course Урок 25/imgs/Pasted image 20241101160331.png",
-    "Ulbi Course Урок 25/imgs/Pasted image 20241101155926.png",
-    "Ulbi Course Урок 25/imgs/Pasted image 20241101155526.png",
-    "Ulbi Course Урок 25/imgs/Pasted image 20241101155211.png",
-    "Ulbi Course Урок 25/imgs/Pasted image 20241101155118.png",
-    "Ulbi Course Урок 24/Ulbi Course Урок 24.md",
-    "Ulbi Course Урок 25/imgs",
-    "Ulbi Course Урок 25",
-    "Ulbi Course Урок 20/Ulbi Course Урок 20.md",
-    "Ulbi Course Урок 23/Ulbi Course Урок 23.md",
-    "Ulbi Course Урок 24/imgs",
-    "Ulbi Course Урок 24",
-    "Ulbi Course Урок 23/imgs",
+    "Ulbi Course Урок 22/imgs/Pasted image 20241029123914.png",
+    "Ulbi Course Урок 22/imgs/Pasted image 20241029150827.png",
+    "Ulbi Course Урок 22/imgs/Pasted image 20241029123824.png",
+    "Ulbi Course Урок 22/imgs/Pasted image 20241029123117.png",
+    "Ulbi Course Урок 22/imgs/Pasted image 20241029123042.png",
+    "Ulbi Course Урок 22/imgs/Pasted image 20241029122938.png",
+    "Ulbi Course Урок 22/imgs/Pasted image 20241029122937.png",
+    "Ulbi Course Урок 22/imgs/Pasted image 20241029122532.png",
+    "Ulbi Course Урок 22/imgs/Pasted image 20241029122350.png",
+    "Ulbi Course Урок 22/imgs/Pasted image 20241029122647.png",
+    "Ulbi Course Урок 22/imgs/Pasted image 20241029122222.png",
     "Ulbi Course Урок 22/Ulbi Course Урок 22.md",
-    "Ulbi Course Урок 23",
-    "Ulbi Course Урок 21/Ulbi Course Урок 21.md",
     "Ulbi Course Урок 22/imgs",
     "Ulbi Course Урок 22",
+    "Ulbi Course Урок 21/Ulbi Course Урок 21.md",
     "Ulbi Course Урок 21/imgs",
-    "Ulbi Course Урок 21"
+    "Ulbi Course Урок 21",
+    "Ulbi Course Урок 20/Ulbi Course Урок 20.md",
+    "Ulbi Course Урок 20/imgs",
+    "Ulbi Course Урок 20",
+    "snippets",
+    "docker config.md",
+    "Ulbi Course Урок 26/Ulbi Course Урок 26.md",
+    "Ulbi Course Урок 26/imgs",
+    "Ulbi Course Урок 26",
+    "Ulbi Course Урок 25/Ulbi Course Урок 25.md",
+    "Ulbi Course Урок 25/imgs",
+    "Ulbi Course Урок 24/Ulbi Course Урок 24.md",
+    "Ulbi Course Урок 23/Ulbi Course Урок 23.md"
   ]
 }
