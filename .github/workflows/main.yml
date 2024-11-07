@@ -1,9 +1,9 @@
-name: GitHub Actions Demo
+name: linting, testing, building
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   push:
-    paths:
-      - 'build_11/**'  # Only trigger when files in 'build_11' change
+#    paths:
+#      - 'build_11/**'  # Only trigger when files in 'build_11' change
     branches: [ main ]
   pull_request:
     branches: [ main ]
