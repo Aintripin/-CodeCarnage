@@ -4,9 +4,9 @@ on:
   push:
 #    paths:
 #      - 'build_11/**'  # Only trigger when files in 'build_11' change
-    branches: [ main ]
+    branches: [ * ]
   pull_request:
-    branches: [ main ]
+    branches: [ * ]
 
 jobs:
   pipeline:
