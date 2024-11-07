@@ -105,14 +105,12 @@
             "id": "0ae26107aa9be0c3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Ulbi Course Урок 27/Ulbi Course Урок 27.md",
-                "mode": "source",
-                "source": false
+                "file": "Ulbi Course Урок 27/imgs/Pasted image 20241107165528.png"
               },
-              "icon": "lucide-file",
-              "title": "Ulbi Course Урок 27"
+              "icon": "lucide-image",
+              "title": "Pasted image 20241107165528"
             }
           }
         ],
@@ -259,9 +257,11 @@
   },
   "active": "0ae26107aa9be0c3",
   "lastOpenFiles": [
+    "Ulbi Course Урок 27/Ulbi Course Урок 27.md",
+    "Ulbi Course Урок 27/imgs/Pasted image 20241107165543.png",
+    "Ulbi Course Урок 27/imgs/Pasted image 20241107165528.png",
     "Ulbi Course Урок 20/Ulbi Course Урок 20.md",
     "Ulbi Course Урок 27/imgs/Pasted image 20241106172842.png",
-    "Ulbi Course Урок 27/Ulbi Course Урок 27.md",
     "Ulbi Course Урок 27/imgs/Pasted image 20241106181731.png",
     "Ulbi Course Урок 27/imgs/Pasted image 20241106181629.png",
     "Ulbi Course Урок 27/imgs/Pasted image 20241106181545.png",
@@ -269,8 +269,6 @@
     "Ulbi Course Урок 27/imgs/Pasted image 20241106181313.png",
     "Ulbi Course Урок 27/imgs/Pasted image 20241106181209.png",
     "Ulbi Course Урок 27/imgs/Pasted image 20241106181055.png",
-    "Ulbi Course Урок 27/imgs/Pasted image 20241106180955.png",
-    "Ulbi Course Урок 27/imgs/Pasted image 20241106180911.png",
     "Ulbi Course Урок 27/imgs",
     "CI CD pipeline/CI CD Pipeline.md",
     "CI CD pipeline/imgs",
