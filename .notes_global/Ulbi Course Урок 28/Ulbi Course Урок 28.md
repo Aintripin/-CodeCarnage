@@ -857,6 +857,10 @@ npm i -D reg-cli
 ```
 
  В [обсуждении](https://github.com/reg-viz/reg-cli) есть вот это:
+ 
+```URL:
+https://github.com/oblador/loki/issues/308
+```
 
 ![[Pasted image 20241108163432.png]]
 
