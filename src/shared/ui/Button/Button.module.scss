@@ -1,6 +1,14 @@
 .Button {
     cursor: pointer;
     color: var(--primary-color);
+    padding: 6px 15px;
+
+    // Ensure SVG inside button scales with button size
+    svg {
+        width: 100%;
+        height: 100%;
+        transition: width 0.3s, height 0.3s;
+    }
 }
 
 .clear {
@@ -16,3 +24,69 @@
     color: var(--primary-color);
     background: none;
 }
+
+.background {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    border: none;
+    //border-radius: 5px;
+    padding: 2px 3px;
+}
+
+.backgroundInverted {
+    background-color: var(--inverted-bg-color);
+    color: var(--inverted-primary-color);
+    border: none;
+    //border-radius: 5px;
+    padding: 2px 3px;
+}
+
+
+.square {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+}
+
+.square_size_m {
+    width: var(--font-line-m);
+    height: var(--font-line-m);
+
+    svg {
+        width: var(--font-line-m);
+        height: var(--font-line-m);
+    }
+}
+
+.square_size_l {
+    width: var(--font-line-l);
+    height: var(--font-line-l);
+
+    svg {
+        width: var(--font-line-l);
+        height: var(--font-line-l);
+    }
+}
+
+.square_size_xl {
+    width: var(--font-line-xl);
+    height: var(--font-line-xl);
+
+    svg {
+        width: var(--font-line-xl);
+        height: var(--font-line-xl);
+    }
+}
+
+.size_m {
+    font: var(--font-m);
+}
+
+.size_l {
+    font: var(--font-l);
+}
+
+.size_xl {
+    font: var(--font-xl);
+}
+

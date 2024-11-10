@@ -78,7 +78,7 @@
 
 ![[Pasted image 20241107174833.png]]
 
-Это будем добавлять, как дполнительный класс. Чтобы сильно не захламлять JSX, вынесем моды в отдельный объект:
+Это будем добавлять, как дополнительный класс. Чтобы сильно не захламлять JSX, вынесем моды в отдельный объект:
 
 ![[Pasted image 20241107175028.png]]
 
@@ -113,7 +113,7 @@
 
 > `Button.tsx`:
 
-Щас ему пришла идея "переименовать для однообразности" вот это:
+Щас ему пришла идея "переименовать для однообразности" (`shift` + `F6`, кстати) вот это:
 
 ![[Pasted image 20241107175559.png]]
 
@@ -170,7 +170,7 @@
 ![[Pasted image 20241107180535.png]]
 
 
-Классы, у которых значения всегда `true` лучше добавлять в additional классы в массив, а ен в моды
+Классы, у которых значения всегда `true` лучше добавлять в additional классы в массив, а не в моды
 
 Терь по умолчанию кнопка выглядит вот так:
 
@@ -273,7 +273,7 @@ npm run storybook
 
 Мы задаём только для кнопок, которые имеют пропс `square`. Т.е. для квадратных 
 
-Для обычных кнопок, по-хорошему, тоже надо ументь задавать размеры
+		Для обычных кнопок, по-хорошему, тоже надо ументь задавать размеры
 
 Короче, вот эти поля вырезаем:
 
@@ -566,7 +566,75 @@ npm run storybook
 
 класс мы назвали `secondary`, а используется, по факту, `inverted-primary`
 
-Это надо было назвать не `secondary`, а `inverted`
+Это надо было назвать не `secondary`, а `inverted
+
+> `Sidebar.module.scss`:
+
+```SCSS:
+.Sidebar {  
+    height: calc(100vh - var(--navbar-height));  
+    width: var(--sidebar-width);  
+    background: var(--inverted-bg-color);  
+    position: relative;  
+    transition: width 0.3s;  
+}  
+  
+.switchers {  
+    position: absolute;  
+    bottom: 20px;  
+    display: flex;  
+    justify-content: center;  
+    width: 100%;  
+}  
+  
+.collapsed {  
+    width: var(--sidebar-width-collapsed);  
+  
+    .switchers {  
+        flex-direction: column;  
+        align-items: center;  
+    }  
+}  
+  
+.lang {  
+    margin-left: 20px;  
+}  
+  
+.collapsedBtn {  
+    position: absolute;  
+    right: -32px;  
+    bottom: 32px;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    padding: 2px 3px;  
+}  
+  
+.items {  
+    margin-top: 20px;  
+    margin-left: 30px;  
+    display: flex;  
+    flex-direction: column;  
+}  
+  
+.link {  
+    margin-top: 10px;  
+}  
+  
+.item {  
+    margin-top: 10px;  
+    display: flex;  
+    align-items: center;  
+}  
+  
+.link {  
+    margin-left: 10px;  
+}  
+  
+.icon {  
+    fill: var(--inverted-primary-color);  
+}
+```
 
 > `Sidebar.module.scss`:
 
