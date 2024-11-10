@@ -1,94 +1,37 @@
 {
   "main": {
-    "id": "29ea12d060fa1c93",
+    "id": "e2003c98405a9d58",
     "type": "split",
     "children": [
       {
-        "id": "6008e1424e1a2b50",
+        "id": "4e852a1845147882",
         "type": "tabs",
         "children": [
           {
-            "id": "30dfa3177627ac8a",
+            "id": "762ddf41575f739b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Ulbi Course Урок 20/Ulbi Course Урок 20.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Ulbi Course Урок 20"
-            }
-          },
-          {
-            "id": "3a993f7448bbd09e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Ulbi Course Урок 24/Ulbi Course Урок 24.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Ulbi Course Урок 24"
-            }
-          },
-          {
-            "id": "8c48767cbba92e3e",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Ulbi Course Урок 25/imgs/8d086051017a1293b1ce5dddd13cd32d.gif"
-              },
-              "icon": "lucide-image",
-              "title": "8d086051017a1293b1ce5dddd13cd32d"
-            }
-          },
-          {
-            "id": "fa3bcdf2ada3d1c2",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Ulbi Course Урок 25/imgs/8d086051017a1293b1ce5dddd13cd32d.gif"
-              },
-              "icon": "lucide-image",
-              "title": "8d086051017a1293b1ce5dddd13cd32d"
-            }
-          },
-          {
-            "id": "ff86f0e0610aba63",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Ulbi Course Урок 25/Ulbi Course Урок 25.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Ulbi Course Урок 25"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "f6be4df4702c409c",
+    "id": "d931660c489a14c8",
     "type": "split",
     "children": [
       {
-        "id": "b5beb6e8c04f7501",
+        "id": "17fab0dcb158aef1",
         "type": "tabs",
         "children": [
           {
-            "id": "91e6b6c3608a4dfa",
+            "id": "2482c65473b26805",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -100,7 +43,7 @@
             }
           },
           {
-            "id": "2dd0e2c69db0d5a8",
+            "id": "44adcad0af9a2334",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -117,7 +60,7 @@
             }
           },
           {
-            "id": "f1d3d30728e53bdc",
+            "id": "d55f9721d110c7e3",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -133,20 +76,19 @@
     "width": 300
   },
   "right": {
-    "id": "29e331dab42db0c0",
+    "id": "b00708f264cbe304",
     "type": "split",
     "children": [
       {
-        "id": "64e253a65473a7aa",
+        "id": "38aba0ae24acb235",
         "type": "tabs",
         "children": [
           {
-            "id": "ef4b4304c327b295",
+            "id": "e564494c2c1ed0de",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Ulbi Course Урок 20/Ulbi Course Урок 20.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,25 +98,24 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Ulbi Course Урок 20"
+              "title": "Backlinks"
             }
           },
           {
-            "id": "ccfe84391d096f2a",
+            "id": "26dc42ff55329820",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Ulbi Course Урок 20/Ulbi Course Урок 20.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Ulbi Course Урок 20"
+              "title": "Outgoing links"
             }
           },
           {
-            "id": "7e280e3f07bd6dc7",
+            "id": "f6608921225b6598",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -187,15 +128,13 @@
             }
           },
           {
-            "id": "c2de9e7bdde1ceb8",
+            "id": "d758f28bed71bffb",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Ulbi Course Урок 20/Ulbi Course Урок 20.md"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "Outline of Ulbi Course Урок 20"
+              "title": "Outline"
             }
           }
         ]
@@ -215,33 +154,6 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ff86f0e0610aba63",
-  "lastOpenFiles": [
-    "Ulbi Course Урок 25/imgs/Pasted image 20241102234015.png",
-    "Ulbi Course Урок 25/Ulbi Course Урок 25.md",
-    "Ulbi Course Урок 25/imgs/Pasted image 20241102234341.png",
-    "Ulbi Course Урок 25/imgs/Pasted image 20241031230726.png",
-    "Ulbi Course Урок 25/imgs/Pasted image 20241031230632.png",
-    "Ulbi Course Урок 25/imgs/Pasted image 20241102145844.png",
-    "Ulbi Course Урок 25/imgs/8d086051017a1293b1ce5dddd13cd32d.gif",
-    "Ulbi Course Урок 25/imgs/Pasted image 20241101155823.png",
-    "Ulbi Course Урок 25/imgs/Pasted image 20241102145712.png",
-    "Ulbi Course Урок 25/imgs/Pasted image 20241101160552.png",
-    "Ulbi Course Урок 25/imgs/Pasted image 20241101160331.png",
-    "Ulbi Course Урок 24/Ulbi Course Урок 24.md",
-    "Ulbi Course Урок 25/imgs",
-    "Ulbi Course Урок 25",
-    "Ulbi Course Урок 20/Ulbi Course Урок 20.md",
-    "Ulbi Course Урок 23/Ulbi Course Урок 23.md",
-    "Ulbi Course Урок 24/imgs",
-    "Ulbi Course Урок 24",
-    "Ulbi Course Урок 23/imgs",
-    "Ulbi Course Урок 22/Ulbi Course Урок 22.md",
-    "Ulbi Course Урок 23",
-    "Ulbi Course Урок 21/Ulbi Course Урок 21.md",
-    "Ulbi Course Урок 22/imgs",
-    "Ulbi Course Урок 22",
-    "Ulbi Course Урок 21/imgs",
-    "Ulbi Course Урок 21"
-  ]
+  "active": "762ddf41575f739b",
+  "lastOpenFiles": []
 }

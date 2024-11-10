@@ -11,7 +11,13 @@
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
     "lint:scss": "npx stylelint \"**/*.scss\"",
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
+<<<<<<< HEAD
     "unit": "jest --config ./config/jest/jest.config.ts"
+=======
+    "unit": "jest --config ./config/jest/jest.config.ts",
+    "storybook": "start-storybook -p 6006 -c ./config/storybook",
+    "build-storybook": "build-storybook -c ./config/storybook"
+>>>>>>> 35dabf958a47fd06b6403b61bdad746e330fba6d
   },
   "keywords": [],
   "author": "",
@@ -21,7 +27,19 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
+<<<<<<< HEAD
     "@svgr/webpack": "^6.5.1",
+=======
+    "@storybook/addon-actions": "^6.4.19",
+    "@storybook/addon-essentials": "^6.4.19",
+    "@storybook/addon-interactions": "^6.4.19",
+    "@storybook/addon-links": "^6.4.19",
+    "@storybook/builder-webpack5": "^6.4.19",
+    "@storybook/manager-webpack5": "^6.4.19",
+    "@storybook/react": "^6.4.19",
+    "@storybook/testing-library": "^0.0.9",
+    "@svgr/webpack": "^6.2.1",
+>>>>>>> 35dabf958a47fd06b6403b61bdad746e330fba6d
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",
     "@types/jest": "^27.4.1",
@@ -36,7 +54,11 @@
     "@typescript-eslint/parser": "^5.12.1",
     "babel-loader": "^8.2.3",
     "babel-plugin-i18next-extract": "^0.8.3",
+<<<<<<< HEAD
     "css-loader": "^6.11.0",
+=======
+    "css-loader": "^6.6.0",
+>>>>>>> 35dabf958a47fd06b6403b61bdad746e330fba6d
     "eslint": "^8.10.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-i18next": "^5.1.2",
@@ -48,11 +70,20 @@
     "html-webpack-plugin": "^5.5.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
+<<<<<<< HEAD
     "mini-css-extract-plugin": "^2.9.2",
     "regenerator-runtime": "^0.13.9",
     "sass": "^1.80.6",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.4",
+=======
+    "loki": "^0.28.1",
+    "mini-css-extract-plugin": "^2.5.3",
+    "regenerator-runtime": "^0.13.9",
+    "sass": "^1.49.9",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+>>>>>>> 35dabf958a47fd06b6403b61bdad746e330fba6d
     "stylelint": "^14.5.3",
     "stylelint-config-standard-scss": "^3.0.0",
     "ts-loader": "^9.2.6",
@@ -71,5 +102,21 @@
     "react-dom": "^17.0.2",
     "react-i18next": "^11.15.5",
     "react-router-dom": "^6.2.1"
+<<<<<<< HEAD
+=======
+  },
+  "loki": {
+    "configurations": {
+      "chrome.laptop": {
+        "target": "chrome.docker",
+        "width": 1366,
+        "height": 768
+      },
+      "chrome.iphone7": {
+        "target": "chrome.docker",
+        "preset": "iPhone 7"
+      }
+    }
+>>>>>>> 35dabf958a47fd06b6403b61bdad746e330fba6d
   }
 }

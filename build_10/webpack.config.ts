@@ -2,7 +2,10 @@ import webpack from 'webpack';
 import path from 'path';
 import { buildWebpackConfig } from './config/build/buildWebpackConfig';
 import { BuildEnv, BuildPaths } from './config/build/types/config';
+<<<<<<< HEAD
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+=======
+>>>>>>> 35dabf958a47fd06b6403b61bdad746e330fba6d
 
 export default (env: BuildEnv) => {
     const paths: BuildPaths = {
@@ -14,6 +17,7 @@ export default (env: BuildEnv) => {
 
     const mode = env.mode || 'development';
     const PORT = env.port || 3000;
+<<<<<<< HEAD
     const isDev = mode === 'development';
 
     const config: webpack.Configuration = {
@@ -71,3 +75,17 @@ export default (env: BuildEnv) => {
 
     return config;
 };
+=======
+
+    const isDev = mode === 'development';
+
+    const config: webpack.Configuration = buildWebpackConfig({
+        mode,
+        paths,
+        isDev,
+        port: PORT,
+    });
+
+    return config;
+};
+>>>>>>> 35dabf958a47fd06b6403b61bdad746e330fba6d
