@@ -28,14 +28,14 @@ export const Button: FC<ButtonProps> = (props) => {
         children,
         theme,
         square,
-        size,
+        size = ButtonSize.M,
         ...otherProps
     } = props;
 
     const mods: Record<string, boolean> = {
         [cls[theme]]: true,
         [cls.square]: square,
-        [cls.size]: true,
+        [cls[size]]: true,
     };
 
     return (
