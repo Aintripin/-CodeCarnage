@@ -2,9 +2,9 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import React, {
     ReactNode, useCallback, useEffect, useRef, useState,
 } from 'react';
-import cls from './Modal.module.scss';
-import { Portal } from '../Portal/Portal';
+import { Portal } from 'shared/ui/Portal/Portal';
 import { useTheme } from 'app/providers/ThemeProvider';
+import cls from './Modal.module.scss';
 
 interface ModalProps {
     className?: string;
@@ -24,19 +24,20 @@ export const Modal = (props: ModalProps) => {
     } = props;
 
     const [isClosing, setIsClosing] = useState(false);
-    const timeRef = useRef<ReturnType<typeof setTimeout>>();
+    const timerRef = useRef<ReturnType<typeof setTimeout>>();
     const { theme } = useTheme();
 
     const closeHandler = useCallback(() => {
         if (onClose) {
             setIsClosing(true);
-            timeRef.current = setTimeout(() => {
+            timerRef.current = setTimeout(() => {
                 onClose();
                 setIsClosing(false);
             }, ANIMATION_DELAY);
         }
     }, [onClose]);
 
+    // Новые ссылки!!!
     const onKeyDown = useCallback((e: KeyboardEvent) => {
         if (e.key === 'Escape') {
             closeHandler();
@@ -53,7 +54,7 @@ export const Modal = (props: ModalProps) => {
         }
 
         return () => {
-            clearTimeout(timeRef.current);
+            clearTimeout(timerRef.current);
             window.removeEventListener('keydown', onKeyDown);
         };
     }, [isOpen, onKeyDown]);
