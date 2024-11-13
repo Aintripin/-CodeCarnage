@@ -334,6 +334,35 @@ export default counterSlice.reducer
 ![[Pasted image 20241112171336.png]]
 ![[Pasted image 20241112171346.png]]
 
+>`CounterSlice.ts`:
+
+```TSX:
+import { createSlice } from '@reduxjs/toolkit';  
+  
+export interface CounterState {  
+    value: number  
+}  
+  
+export const counterSlice = createSlice({  
+    name: 'counter',  
+    initialState: {  
+        value: 0,  
+    },  
+    reducers: {  
+        increment: (state) => {  
+            state.value += 1;  
+        },  
+        decrement: (state) => {  
+            state.value -= 1;  
+        },  
+    },  
+});  
+  
+// Action creators are generated for each case reducer function  
+export const { actions: counterActions } = counterSlice;  
+export const { reducer: counterReducer } = counterSlice;
+```
+
 Внутри React'а лежит библиотека `immerJS`, которая позволяет делать state изменяемым: мы можем обращаться к полям state'а напрямую и их изменять 
 
 ##### Но щас у нас стоит Linter на то, что аргументы функции мы менять не можем, т.к. это проиворечит концепции `immerJS`
@@ -426,11 +455,23 @@ export default counterSlice.reducer
 
 ![[Pasted image 20241112174507.png]]
 
-Щас проблема в том, что у нас тип импортируется из внутренностей, а надо импортировать его из publicAPI
+Щас проблема в том, что у нас тип импортируется из внутренностей, а надо импортировать его из publicAPI....
 
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+```TSX:
+import { CounterSchema } from 'app/entities/Counter/model/types/counterSchema';  
+  
+export interface StateSchema {  
+    counter: CounterSchema;  
+}
+```
 
+P.S. у меня, почему-то ни по какому другому пути, кроме как через `app/entities/...` не хочет
 
-Поэтому сначала экспортируем его отсюда
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+....Поэтому сначала экспортируем его отсюда
 
 >`index.ts`:
 
@@ -442,6 +483,21 @@ export default counterSlice.reducer
 
 ![[Pasted image 20241112174835.png]]
 
+`index.ts`:
+
+```TSX:
+import { counterReducer } from 'app/entities/Counter/model/slice/counterSlice';  
+import { Counter } from 'app/entities/Counter/ui/Counter';  
+import type { CounterSchema } from 'app/entities/Counter/model/types/counterSchema';  
+  
+export {  
+    counterReducer,  
+    Counter,  
+    CounterSchema,  
+};
+```
+
+Хз, что у меня тут, опять только через путь, включая `app`
 
 #### Терь разберёмся с `reducer`'ом и с типами - со схемой 
 
