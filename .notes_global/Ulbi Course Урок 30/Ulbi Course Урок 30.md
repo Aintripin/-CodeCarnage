@@ -469,6 +469,18 @@ export interface StateSchema {
 
 P.S. у меня, почему-то ни по какому другому пути, кроме как через `app/entities/...` не хочет
 
+#### UPD: ТАК БЛЯДЬ! После часа-другого дебага, выяснилось, что, сука, `index.ts` WAS NOT IN THE `COUNTER` FOLDER!!! SO THESE FUCKING PATHS WERE POINTING TO NOTHING AND LITERALLY MADE NO FUCKING SENSE
+
+Исправил на:
+
+```TSX:
+import { CounterSchema } from 'app/entities/Counter';  
+  
+export interface StateSchema {  
+    counter: CounterSchema;  
+}
+```
+
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 ....Поэтому сначала экспортируем его отсюда
@@ -498,6 +510,22 @@ export {
 ```
 
 Хз, что у меня тут, опять только через путь, включая `app`
+
+Опять-таки, после фикса:
+
+>`index.ts`:
+
+```TSX:
+import { counterReducer } from './model/slice/counterSlice';  
+import { Counter } from './ui/Counter';  
+import type { CounterSchema } from './model/types/counterSchema';  
+  
+export {  
+    counterReducer,  
+    Counter,  
+    CounterSchema,  
+};
+```
 
 #### Терь разберёмся с `reducer`'ом и с типами - со схемой 
 
