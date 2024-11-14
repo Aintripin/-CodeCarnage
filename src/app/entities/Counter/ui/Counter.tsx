@@ -6,7 +6,7 @@ import { StateSchema } from 'app/providers/StoreProvider/config/StateSchema';
 
 export const Counter = () => {
     const dispatch = useDispatch();
-    const counterValue = useSelector((state: StateSchema) => state);
+    const counterValue = useSelector((state: StateSchema) => state.counter.);
     const { t } = useTranslation();
 
     const increment = () => {
