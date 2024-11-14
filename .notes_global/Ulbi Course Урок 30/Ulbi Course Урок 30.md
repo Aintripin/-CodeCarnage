@@ -581,17 +581,37 @@ export {
 
 Мы ипортируем тут `StateSchema` из вышестоящего слоя. Так делать нельзя обычно. В качестве исключений могут быть типы (наш случай)
 
+```TSX:
+import {  
+    StoreProvider,  
+} from './ui/StoreProvider';  
+import { createReduxStore } from './config/store';  
+import type { StateSchema } from './config/store/StateSchema';  
+  
+export {  
+    StoreProvider,  
+    createReduxStore,  
+    StateSchema,  
+};
+```
+
 Терь у нас:
 
 >`getCounter.ts`:
 
 ![[Pasted image 20241113210459.png]]
 
+```TSX:
+import { StateSchema } from 'app/providers/StoreProvider/config/StateSchema';  
+  
+export const getCounter = (state: StateSchema) => state.counter;
+```
+
 Возвращаем интересующее нас поле — `Counter`. Пока что мы получили state `Counter`'а целиком
 
 Но нас интересует конкретно поле `value`, которое находится внутри
 
-Для него также создадим отдеьные файлы
+Для него также создадим отдельные файлы
 
 >`getCounterValue.ts` (файл одноимённый внутри одноимённой папки)
 
@@ -633,6 +653,17 @@ export {
 >`getCounterValue.ts`:
 
 ![[Pasted image 20241113211916.png]]
+
+```TSX:
+import { CounterSchema } from 'app/entities/Counter';  
+import { createSelector } from '@reduxjs/toolkit';  
+import { getCounter } from '../getCounter/getCounter';  
+  
+export const getCounterValue = createSelector(  
+    getCounter,  
+    (counter:CounterSchema) => counter.value,  
+);
+```
 
 В принципе, re-select использовать было **нахуй не надо**, потому что никаких вычислений внутри мы не проводим
 
@@ -683,4 +714,77 @@ export {
 будет вот так
 
 
-22:00
+
+
+
+
+
+
+
+
+
+Щас у нас состояние у `Counter` хранится в глобальном `state`'е. По этой причине, если мы на страницу `<Main>` добавим его и его же добавим на страницу `<AboutPage>`, то при переходе между этими двумя страницами, `state` сохраняется
+Для некоторых компонентов это удобно
+
+
+### Щас напишем тесты, на то, что мы сделали: счётчик, slector'ы и проч...
+
+
+>`getCounter.test.ts`:
+
+`DeepPartial` - оно используется по причине, что нам не надо объявлять весь `state` со всеми полями, а только какой-то кусочек. В этом `DeepPartial` тип нам поможет: Он позволяет проигнорировать все поля и объявить только те, которые необходимо (чаще всего он используется в тестах)
+
+
+Selector'ы принимают на вход `state`, поэтому мы вот этот получившийся `state` передадим в `selector`:
+
+![[Pasted image 20241114173834.png]]
+
+Если мы оставим это всё в таком виде:
+
+![[Pasted image 20241114173901.png]]
+
+То TS будет ругаться, что на вход мы ожидаем `StateSchema`, а приходит `DeepPartial`
+
+Мы можем с помощью `as` чётко привести к `StateSchema`:
+![[Pasted image 20241114174150.png]]
+![[Pasted image 20241114174018.png]]
+
+В тестах такое делать допустимо, в самом коде нежелательно
+
+Т.е. мы тут ожидаем, что вот этот selector вернёт нужный нам участок `state`'а: у нас `state` может быть очень большим, в нём может быть несколько сотен `reducer`'ов и мы проверяем, что `getCounter` возвращает именно тот участок, который отвечает за счётчик
+
+
+
+Запустим тесты:
+
+```BASH:
+npm run test:unit getCounter.test.ts
+```
+
+
+##### Т.к. мы будем писать много тестов, предлагается сделать сниппет по аналогии с компонентами 
+
+file -> settings -> live templates (in the search box) -> 
+
+![[Pasted image 20241114174949.png]]
+
+![[Pasted image 20241114175011.png]]
+
+![[Pasted image 20241114175346.png]]
+
+В `template text` вставим скопированный участок кода, который мы уже написали:
+
+![[Pasted image 20241114175433.png]]
+
+Единственное, поправим саму структуру. Используем переменную `$FILE$`
+
+![[Pasted image 20241114175537.png]]
+
+Укажем расширения:
+
+![[Pasted image 20241114175611.png]]
+
+![[Pasted image 20241114175625.png]]
+
+
+25:57s
