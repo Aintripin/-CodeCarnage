@@ -987,3 +987,4 @@ npm run test:unit Counter.test.tsx
 ![[Pasted image 20241114224200.png]]
 
 Значит мы <b>исполнили</b> чётко
+
