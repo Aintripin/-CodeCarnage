@@ -1,5 +1,3 @@
-import webpack from 'webpack';
-
 export type BuildMode = 'production' | 'development';
 
 export interface BuildPaths {
@@ -20,10 +18,3 @@ export interface BuildOptions {
     isDev: boolean;
     port: number;
 }
-
-
-// uncharted waters
-
-export type WebpackConfig = webpack.Configuration & {
-    resolve: webpack.ResolveOptions;
-};

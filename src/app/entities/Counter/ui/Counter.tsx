@@ -3,10 +3,11 @@ import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { counterActions } from 'app/entities/Counter/model/slice/counterSlice';
 import { StateSchema } from 'app/providers/StoreProvider/config/StateSchema';
+import { getCounterValue } from 'entities/Counter/model/selectors/getCounterValue/getCounterValue';
 
 export const Counter = () => {
     const dispatch = useDispatch();
-    const counterValue = useSelector((state: StateSchema) => state.counter.);
+    const counterValue = useSelector(getCounterValue);
     const { t } = useTranslation();
 
     const increment = () => {
