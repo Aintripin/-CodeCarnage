@@ -27,12 +27,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ulbi Course Урок 30/Ulbi Course Урок 30.md",
+                "file": "Ulbi Course Урок 31/Ulbi Course Урок 31.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Ulbi Course Урок 30"
+              "title": "Ulbi Course Урок 31"
+            }
+          },
+          {
+            "id": "1e731ecff57d2fe4",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Ulbi Course Урок 31/imgs/Pasted image 20241116180108.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20241116180108"
             }
           },
           {
@@ -273,24 +285,28 @@
   },
   "active": "3a993f7448bbd09e",
   "lastOpenFiles": [
+    "Ulbi Course Урок 31/imgs/2c335f0c0994e8db6570540d982f4f5102ed2a0a 1.jpeg",
+    "Ulbi Course Урок 31/imgs/Pasted image 20241116183608.png",
+    "Ulbi Course Урок 31/Ulbi Course Урок 31.md",
+    "Ulbi Course Урок 31/imgs",
+    "Ulbi Course Урок 31/imgs/Pasted image 20241116183436.png",
+    "Ulbi Course Урок 31/imgs/Pasted image 20241116183433.png",
+    "Ulbi Course Урок 31/imgs/Pasted image 20241116183257.png",
+    "Ulbi Course Урок 31/imgs/Pasted image 20241116183235.png",
+    "Ulbi Course Урок 30/Ulbi Course Урок 30.md",
+    "Ulbi Course Урок 31/imgs/Pasted image 20241116180108.png",
+    "Ulbi Course Урок 25/imgs/8d086051017a1293b1ce5dddd13cd32d.gif",
+    "Ulbi Course Урок 31/imgs/Pasted image 20241116182906.png",
+    "Ulbi Course Урок 31/imgs/Pasted image 20241116182717.png",
+    "Ulbi Course Урок 31/imgs/Pasted image 20241116182358.png",
+    "Ulbi Course Урок 31",
+    "Ulbi Course Урок 29/Ulbi Course Урок 29.md",
     "Ulbi Course Урок 24/Ulbi Course Урок 24.md",
     "Полезные команды/Полезные команды.md",
-    "Ulbi Course Урок 30/Ulbi Course Урок 30.md",
-    "Ulbi Course Урок 30/imgs/Pasted image 20241114221132.png",
-    "Ulbi Course Урок 30/imgs/Pasted image 20241114224200.png",
-    "Ulbi Course Урок 30/imgs/Pasted image 20241114224141.png",
-    "Ulbi Course Урок 30/imgs/Pasted image 20241114224010.png",
-    "Ulbi Course Урок 30/imgs/Pasted image 20241114223919.png",
-    "Ulbi Course Урок 30/imgs/Pasted image 20241114223600.png",
-    "Ulbi Course Урок 30/imgs/Pasted image 20241114223539.png",
-    "Ulbi Course Урок 30/imgs/Pasted image 20241114223533.png",
-    "Ulbi Course Урок 30/imgs/Pasted image 20241114223214.png",
-    "Ulbi Course Урок 30/imgs/Pasted image 20241114223212.png",
     "snippets/test (TS + JS).md",
     "snippets",
     "Ulbi Course Урок 28/Ulbi Course Урок 28.md",
     "Ulbi Course Урок 30/imgs",
-    "Ulbi Course Урок 29/Ulbi Course Урок 29.md",
     "Ulbi Course Урок 30",
     "Ulbi Course Урок 20/Ulbi Course Урок 20.md",
     "docker config.md",
@@ -300,8 +316,6 @@
     "Ulbi Course Урок 29",
     "Ulbi Course Урок 28/imgs",
     "Ulbi Course Урок 27/Ulbi Course Урок 27.md",
-    "Ulbi Course Урок 28",
-    "Ulbi Course Урок 27/imgs",
     "CI CD pipeline/CI CD Pipeline.md",
     "Ulbi Course Урок 26/Ulbi Course Урок 26.md",
     "Ulbi Course Урок 22/Ulbi Course Урок 22.md",
