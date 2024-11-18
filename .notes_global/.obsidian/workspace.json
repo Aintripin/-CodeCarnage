@@ -39,26 +39,50 @@
             "id": "da6aa9acdb83efcf",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Ulbi Course Урок 31 1/Ulbi Course Урок 31 1.md",
-                "mode": "source",
-                "source": false
+                "file": "snippets/imgs/Pasted image 20241118152626.png"
               },
-              "icon": "lucide-file",
-              "title": "Ulbi Course Урок 31 1"
+              "icon": "lucide-image",
+              "title": "Pasted image 20241118152626"
+            }
+          },
+          {
+            "id": "8face3dc412bdf3f",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "snippets/imgs/Pasted image 20241118152600.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20241118152600"
+            }
+          },
+          {
+            "id": "545014bf2e534cbe",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Ulbi Course Урок 32/imgs/Pasted image 20241118174934.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20241118174934"
             }
           },
           {
             "id": "1e731ecff57d2fe4",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Ulbi Course Урок 31/imgs/Pasted image 20241116180108.png"
+                "file": "Ulbi Course Урок 32/Ulbi Course Урок 32.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20241116180108"
+              "icon": "lucide-file",
+              "title": "Ulbi Course Урок 32"
             }
           },
           {
@@ -156,7 +180,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -297,19 +321,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "da6aa9acdb83efcf",
+  "active": "1e731ecff57d2fe4",
   "lastOpenFiles": [
-    "Ulbi Course Урок 31 1/imgs/Pasted image 20241118114147.png",
+    "Ulbi Course Урок 32/imgs/Pasted image 20241118175149.png",
+    "Ulbi Course Урок 32/Ulbi Course Урок 32.md",
+    "Ulbi Course Урок 32/imgs/Pasted image 20241118175131.png",
+    "Ulbi Course Урок 32/imgs/Pasted image 20241118175129.png",
+    "Ulbi Course Урок 31/imgs/Pasted image 20241116180108.png",
+    "Ulbi Course Урок 32/imgs/Pasted image 20241118174934.png",
+    "Ulbi Course Урок 32/imgs/Pasted image 20241118174910.png",
+    "Ulbi Course Урок 32/imgs/Pasted image 20241118174807.png",
+    "Ulbi Course Урок 32/imgs/Pasted image 20241118174715.png",
+    "Ulbi Course Урок 32/imgs/Pasted image 20241118174638.png",
+    "Ulbi Course Урок 32/imgs/Pasted image 20241118171542.png",
+    "snippets/rc (create react component).md",
+    "snippets/imgs",
+    "snippets/test (TS + JS).md",
+    "Ulbi Course Урок 32/imgs",
     "Ulbi Course Урок 31 1/Ulbi Course Урок 31 1.md",
-    "Ulbi Course Урок 31 1/imgs/Pasted image 20241118114110.png",
-    "Ulbi Course Урок 31 1/imgs/Pasted image 20241118112327.png",
-    "Ulbi Course Урок 31 1/imgs/Pasted image 20241118111823.png",
-    "Ulbi Course Урок 31 1/imgs/Pasted image 20241118111711.png",
-    "Ulbi Course Урок 31 1/imgs/Pasted image 20241118111622.png",
-    "Ulbi Course Урок 31 1/imgs/Pasted image 20241118111512.png",
-    "Ulbi Course Урок 31 1/imgs/Pasted image 20241118111410.png",
-    "Ulbi Course Урок 31 1/imgs/Pasted image 20241118111149.png",
-    "Ulbi Course Урок 31 1/imgs/Pasted image 20241118111143.png",
+    "Ulbi Course Урок 32",
     "Ulbi Course Урок 31 1/imgs",
     "Ulbi Course Урок 32/imgs",
     "Ulbi Course Урок 31/Ulbi Course Урок 31.md",
@@ -320,15 +350,11 @@
     "Ulbi Course Урок 29/Ulbi Course Урок 29.md",
     "Ulbi Course Урок 24/Ulbi Course Урок 24.md",
     "Полезные команды/Полезные команды.md",
-    "snippets/test (TS + JS).md",
     "snippets",
     "Ulbi Course Урок 28/Ulbi Course Урок 28.md",
     "Ulbi Course Урок 30/imgs",
-    "Ulbi Course Урок 30",
     "Ulbi Course Урок 20/Ulbi Course Урок 20.md",
     "docker config.md",
-    "Полезные команды/imgs",
-    "Полезные команды",
     "Ulbi Course Урок 27/Ulbi Course Урок 27.md",
     "CI CD pipeline/CI CD Pipeline.md",
     "Ulbi Course Урок 26/Ulbi Course Урок 26.md",
