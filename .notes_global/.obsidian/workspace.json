@@ -36,6 +36,20 @@
             }
           },
           {
+            "id": "da6aa9acdb83efcf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Ulbi Course Урок 32/Ulbi Course Урок 32.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Ulbi Course Урок 32"
+            }
+          },
+          {
             "id": "1e731ecff57d2fe4",
             "type": "leaf",
             "state": {
@@ -142,7 +156,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -283,22 +297,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3a993f7448bbd09e",
+  "active": "da6aa9acdb83efcf",
   "lastOpenFiles": [
+    "Pasted image 20241117195122.png",
+    "Pasted image 20241117194821.png",
+    "Pasted image 20241117194732.png",
+    "Pasted image 20241117194615.png",
+    "Pasted image 20241117194216.png",
+    "Ulbi Course Урок 32/imgs",
+    "Ulbi Course Урок 31/Ulbi Course Урок 31.md",
+    "Ulbi Course Урок 32/Ulbi Course Урок 32.md",
+    "Ulbi Course Урок 32",
     "Ulbi Course Урок 31/imgs/2c335f0c0994e8db6570540d982f4f5102ed2a0a 1.jpeg",
     "Ulbi Course Урок 31/imgs/Pasted image 20241116183608.png",
-    "Ulbi Course Урок 31/Ulbi Course Урок 31.md",
     "Ulbi Course Урок 31/imgs",
     "Ulbi Course Урок 31/imgs/Pasted image 20241116183436.png",
     "Ulbi Course Урок 31/imgs/Pasted image 20241116183433.png",
     "Ulbi Course Урок 31/imgs/Pasted image 20241116183257.png",
     "Ulbi Course Урок 31/imgs/Pasted image 20241116183235.png",
     "Ulbi Course Урок 30/Ulbi Course Урок 30.md",
-    "Ulbi Course Урок 31/imgs/Pasted image 20241116180108.png",
-    "Ulbi Course Урок 25/imgs/8d086051017a1293b1ce5dddd13cd32d.gif",
-    "Ulbi Course Урок 31/imgs/Pasted image 20241116182906.png",
-    "Ulbi Course Урок 31/imgs/Pasted image 20241116182717.png",
-    "Ulbi Course Урок 31/imgs/Pasted image 20241116182358.png",
     "Ulbi Course Урок 31",
     "Ulbi Course Урок 29/Ulbi Course Урок 29.md",
     "Ulbi Course Урок 24/Ulbi Course Урок 24.md",
@@ -313,8 +330,6 @@
     "Полезные команды/imgs",
     "Полезные команды",
     "Ulbi Course Урок 29/imgs",
-    "Ulbi Course Урок 29",
-    "Ulbi Course Урок 28/imgs",
     "Ulbi Course Урок 27/Ulbi Course Урок 27.md",
     "CI CD pipeline/CI CD Pipeline.md",
     "Ulbi Course Урок 26/Ulbi Course Урок 26.md",
