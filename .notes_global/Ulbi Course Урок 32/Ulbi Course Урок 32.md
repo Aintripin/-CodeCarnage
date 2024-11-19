@@ -72,7 +72,7 @@
 
 Тут нам TS подсказывает, что у нас есть обязательное поле `User`, но мы не добавили для него `reducer`. 
 
-##### Для корневого reducer'а создадим объект отдельно повыше. Для этого у Redux'а есть специальный тип `ReducerMapObject`
+##### Для корневого reducer'а создадим объект отдельно повыше. Для этого у Redux'а есть специальный тип `ReducersMapObject`
 
 ###### Откуда это он знает?
 
@@ -87,7 +87,25 @@
 
 ![[Pasted image 20241118151257.png]]
 
-
+```TSX:
+import { configureStore, ReducersMapObject } from '@reduxjs/toolkit';  
+import { counterReducer } from 'entities/Counter';  
+import { userReducer } from 'app/entities/User';  
+import { StateSchema } from './StateSchema';  
+  
+export function createReduxStore(initialState?: StateSchema) {  
+    const rootReducers: ReducersMapObject<StateSchema> = {  
+        counter: counterReducer,  
+        user: userReducer,  
+    };  
+  
+    return configureStore<StateSchema>({  
+        reducer: rootReducers,  
+        devTools: __IS_DEV__,  
+        preloadedState: initialState,  
+    });  
+}
+```
 
 ### Щас мы подбираемся к тому, чтобы вот в этой модалке:
 
@@ -133,6 +151,16 @@
 
 Сама форма остаётся изолирована внутри этого модуля
 
+У меня, вообще, вот так:
+
+![[Pasted image 20241119115233.png]]
+
+```BASH:
+TS2307: Cannot find module './ui/LoginModal/LoginModal' or its corresponding type declarations.
+```
+
+Какого-то хуя, опять, несмотря на явно правильный путь, оно мне пишет, что такой хуйни не существует
+
 Теперь вернёмся к `Navbar.tsx`:
 
 >`Navbar.tsx`:
@@ -142,6 +170,9 @@
 ![[Pasted image 20241118153244.png]]
 
 Также добавим пропсы, которые будут отвечать за видимость модалки 
+
+>`LoginModal.tsx`:
+
 
 ![[Pasted image 20241118153359.png]]
 
@@ -182,11 +213,60 @@ ulbi посчитал, что это не pinnacle of UI
 
 ![[Pasted image 20241118160202.png]]
 
+Я немного навалил своего кринжа:
+
+```SCSS:
+.LoginForm {  
+  display: flex;  
+  flex-direction: column;  
+  width: 400px;  
+}  
+  
+.input {  
+  margin-top: 10px;  
+  border-radius: 8px;  
+  
+  &:focus {  
+    border: 2px solid var(--inverted-bg-color);  
+  }  
+}  
+  
+.loginBtn {  
+  margin-top: 15px;  
+  margin-left: auto;  
+  font-weight: bold;  
+}
+```
+
 >`LoginForm.tsx`:
 
 Терь соответствующие классы повесим на кнопки
 
 ![[Pasted image 20241118160117.png]]
+
+```TSX:
+import { classNames } from 'shared/lib/classNames/classNames';  
+import { useTranslation } from 'react-i18next';  
+import { Button } from 'shared/ui/Button/Button';  
+import cls from './LoginForm.module.scss';  
+  
+interface LoginFormProps {  
+    className?: string;  
+}  
+  
+export const LoginForm = ({ className }: LoginFormProps) => {  
+    const { t } = useTranslation();  
+  
+    return (  
+        <div className={classNames(cls.LoginForm, {}, [className])}>  
+            <input type="text" className={cls.input} />  
+            <input type="text" className={cls.input} />  
+            <Button className={cls.loginBtn}>  
+                {t('Войти')}  
+            </Button>  
+        </div>    );  
+};
+```
 
 Терь вот так:
 
@@ -265,7 +345,7 @@ ulbi посчитал, что это не pinnacle of UI
 
 Т.е., если мы это значение хотим пере-определить, то передаём что-то другое. В ином случае - это текст
 
->`input.tsx`:
+>`Input.tsx`:
 
 ![[Pasted image 20241118163015.png]]
 
@@ -279,6 +359,42 @@ ulbi посчитал, что это не pinnacle of UI
 
 В таком случае, если этот пропс не передан, то функция вызвана не будет
 
+> `Input.tsx`:
+
+```TSX:
+import { classNames } from 'shared/lib/classNames/classNames';  
+import React, { ButtonHTMLAttributes, InputHTMLAttributes, memo } from 'react';  
+import { ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';  
+import cls from './Input.module.scss';  
+  
+interface InputProps extends InputHTMLAttributes<HTMLInputElement>{  
+    className?: string;  
+    value?: string;  
+    onChange?: (value: string) => void;  
+}  
+  
+export const Input = memo((props: InputProps) => {  
+    const {  
+        className,  
+        value,  
+        onChange,  
+        type = 'text',  
+        ...otherPropps  
+    } = props;  
+  
+    const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {  
+        onChange?.(e.target.value);  
+    };  
+  
+    return (  
+        <div className={classNames(cls.Input, {}, [className])}>  
+            <input                type={type}  
+                value={value}  
+                onChange={onChangeHandler}  
+            />  
+        </div>    );  
+});
+```
 
 >`LoginForm.tsx`:
 
@@ -301,6 +417,32 @@ ulbi посчитал, что это не pinnacle of UI
 
 Сразу сделаем `onChange`, который будет в качестве значения принимать строку и сразу её ставить
 
+```TSX:
+import React, { useState } from 'react';  
+import { useTranslation } from 'react-i18next';  
+import { Input } from 'shared/ui/input/Input';  
+  
+const MainPage = () => {  
+    const { t } = useTranslation();  
+    const [value, setValue] = useState('');  
+  
+    const onChange = (val: string) => {  
+        setValue(val);  
+    };  
+  
+    return (  
+        <div>  
+            {t('Главная страница')}  
+            <Input  
+                value={value}  
+                onChange={onChange}  
+            />  
+        </div>    );  
+};  
+  
+export default MainPage;
+```
+
 Щас на главной странице у нас получился обычный input:
 
 ![[Pasted image 20241118171542.png]]
@@ -309,7 +451,7 @@ ulbi посчитал, что это не pinnacle of UI
 
 Делаем франкенштейна - идея сделать так, чтобы была прогерская анимация при вводе
 
->`input.tsx`:
+>`Input.tsx`:
 
 ![[Pasted image 20241118174638.png]]
 

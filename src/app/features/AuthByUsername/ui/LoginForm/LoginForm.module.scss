@@ -1,0 +1,22 @@
+.LoginForm {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.input {
+  margin-top: 10px;
+  border-radius: 8px;
+
+  &:focus {
+    border: 2px solid var(--inverted-bg-color);
+  }
+}
+
+.loginBtn {
+  margin-top: 15px;
+  margin-left: auto;
+  font-weight: bold;
+}
+
+
