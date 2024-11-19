@@ -594,6 +594,81 @@ Ulbi решил сделать так: если `placeholder` есть, то е�
 
 ![[Pasted image 20241119162553.png]]
 
+>`Input.tsx`:
+
+```TSX:
+import { classNames } from 'shared/lib/classNames/classNames';
+import React, { ButtonHTMLAttributes, InputHTMLAttributes, memo } from 'react';
+import { ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
+import cls from './Input.module.scss';
+
+// interface InputProps extends InputHTMLAttributes<HTMLInputElement>{
+//     className?: string;
+//     value?: string;
+//     onChange?: (value: string) => void;
+// }
+
+interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
+    className?: string;
+    value?: string;
+    onChange?: (value: string) => void;
+}
+
+export const Input = memo((props: InputProps) => {
+    const {
+        className,
+        value,
+        onChange,
+        type = 'text',
+        placeholder,
+        ...otherProps
+    } = props;
+
+    const [isFocused, setIsFocused] = React.useState(false);
+    const [caretPosition, setCaretPosition] = React.useState(0);
+
+    const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+        onChange?.(e.target.value);
+        setCaretPosition(e.target.value.length);
+    };
+
+    const onBlur = () => {
+        setIsFocused(false);
+    };
+
+    const onFocus = () => {
+        setIsFocused(true);
+    };
+
+    return (
+        <div className={classNames(cls.InputWrapper, {}, [className])}>
+            {placeholder && (
+                <div className={cls.placeholder}>
+                    {`${placeholder} >`}
+                </div>
+            )}
+            <div className={cls.caretWrapper}>
+                <input
+                    type={type}
+                    value={value}
+                    onChange={onChangeHandler}
+                    className={cls.input}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    {...otherProps}
+                />
+                {isFocused && (
+                    <span
+                        className={cls.caret}
+                        style={{ left: `${caretPosition * 9}px` }}
+                    />
+                )}
+            </div>
+        </div>
+    );
+});
+```
+
 Щас выглядит это вот так:
 
 ![[Pasted image 20241119162620.png]]
@@ -603,7 +678,7 @@ Ulbi решил сделать так: если `placeholder` есть, то е�
 ![[Pasted image 20241119162651.png]]
 
 
-Эту проблему можно тоже решить. Для этого у нас есть слушатьель события, который называется `onSelect`:
+Эту проблему можно тоже решить. Для этого у нас есть слушатель события, который называется `onSelect`:
 
 ![[Pasted image 20241119162756.png]]
 
@@ -689,7 +764,7 @@ Ulbi решил сделать так: если `placeholder` есть, то е�
 И, когда мы нажимаем `Войти`, то фокус из `input`'а в этот момент пропадает 
 
 
-
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ##### По хорошему, нужно реализовать такой функционал, чтобы модалка рендерилась лениво. Это также нам понадобится, когда мы в модалку будем помещать какой-нить асинхронный компонент, который должен подружаться только тогда, когда открывается модалка (это всё делается для того, чтобы уменьшить размер bundle'а)
 
 ![[Pasted image 20241119164847.png]]
