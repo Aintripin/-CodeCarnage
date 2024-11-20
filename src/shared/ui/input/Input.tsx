@@ -1,15 +1,12 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import React, { ButtonHTMLAttributes, InputHTMLAttributes, memo, useEffect, useRef } from 'react';
-import { ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
+import React, {
+    InputHTMLAttributes, memo, useEffect, useRef, useState,
+} from 'react';
 import cls from './Input.module.scss';
 
-// interface InputProps extends InputHTMLAttributes<HTMLInputElement>{
-//     className?: string;
-//     value?: string;
-//     onChange?: (value: string) => void;
-// }
+type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>
 
-interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
+interface InputProps extends HTMLInputProps {
     className?: string;
     value?: string;
     onChange?: (value: string) => void;
@@ -26,10 +23,9 @@ export const Input = memo((props: InputProps) => {
         autofocus,
         ...otherProps
     } = props;
-
     const ref = useRef<HTMLInputElement>(null);
-    const [isFocused, setIsFocused] = React.useState(false);
-    const [caretPosition, setCaretPosition] = React.useState(0);
+    const [isFocused, setIsFocused] = useState(false);
+    const [caretPosition, setCaretPosition] = useState(0);
 
     useEffect(() => {
         if (autofocus) {
@@ -52,14 +48,14 @@ export const Input = memo((props: InputProps) => {
     };
 
     const onSelect = (e: any) => {
-        setCaretPosition(e.target?.selectionStart || 0);
+        setCaretPosition(e?.target?.selectionStart || 0);
     };
 
     return (
         <div className={classNames(cls.InputWrapper, {}, [className])}>
             {placeholder && (
                 <div className={cls.placeholder}>
-                    {`${placeholder} >`}
+                    {`${placeholder}>`}
                 </div>
             )}
             <div className={cls.caretWrapper}>
