@@ -141,14 +141,38 @@
             "id": "ff86f0e0610aba63",
             "type": "leaf",
             "state": {
+              "type": "image",
+              "state": {
+                "file": "Ulbi Course Урок 34/imgs/Pasted image 20241121122322.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20241121122322"
+            }
+          },
+          {
+            "id": "e38cf7f03ac0245f",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Ulbi Course Урок 34/imgs/5eaed0a10ee69e106af5ae67_diz6_gxnlew9of97gl1xri-wfd682mdq5zhpj-9oouzrettu01xkbyclxvlnq4-mz2yokn1ewtr-7gvn0qj75copeiljyra2xggwrqtdz7u_uwutufmz4_3tqj_fy28od7kh4lb2-1.webp"
+              },
+              "icon": "lucide-image",
+              "title": "5eaed0a10ee69e106af5ae67_diz6_gxnlew9of97gl1xri-wfd682mdq5zhpj-9oouzrettu01xkbyclxvlnq4-mz2yokn1ewtr-7gvn0qj75copeiljyra2xggwrqtdz7u_uwutufmz4_3tqj_fy28od7kh4lb2-1"
+            }
+          },
+          {
+            "id": "d979408933c915cb",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "Ulbi Course Урок 34/Ulbi Course Урок 34.md",
+                "file": "Продвинутый Redux/Продвинутый Redux.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Ulbi Course Урок 34"
+              "title": "Продвинутый Redux"
             }
           },
           {
@@ -208,7 +232,7 @@
             }
           }
         ],
-        "currentTab": 10
+        "currentTab": 12
       }
     ],
     "direction": "vertical"
@@ -349,21 +373,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "91e6b6c3608a4dfa",
+  "active": "d979408933c915cb",
   "lastOpenFiles": [
+    "Продвинутый Redux/imgs",
+    "Ulbi Course Урок 34/imgs/Pasted image 20241121153921.png",
+    "Продвинутый Redux/Продвинутый Redux.md",
+    "Ulbi Course Урок 34/Ulbi Course Урок 34.md",
+    "Продвинутый Redux",
+    "Ulbi Course Урок 34/imgs/Pasted image 20241121122322.png",
+    "Ulbi Course Урок 34/imgs/5eaed0a10ee69e106af5ae67_diz6_gxnlew9of97gl1xri-wfd682mdq5zhpj-9oouzrettu01xkbyclxvlnq4-mz2yokn1ewtr-7gvn0qj75copeiljyra2xggwrqtdz7u_uwutufmz4_3tqj_fy28od7kh4lb2-1.webp",
+    "Ulbi Course Урок 34/imgs/5eaed0a10ee69e106af5ae67_diz6_gxnlew9of97gl1xri-wfd682mdq5zhpj-9oouzrettu01xkbyclxvlnq4-mz2yokn1ewtr-7gvn0qj75copeiljyra2xggwrqtdz7u_uwutufmz4_3tqj_fy28od7kh4lb2.webp",
+    "Ulbi Course Урок 34/imgs/Pasted image 20241121120458.png",
+    "Ulbi Course Урок 34/imgs/Pasted image 20241121113305.png",
+    "Ulbi Course Урок 34/imgs/Pasted image 20241121113232.png",
+    "Ulbi Course Урок 34/imgs/its-time-to-328386ada8.jpg",
     "Ulbi Course Урок 34/imgs/Pasted image 20241120175105.png",
     "Полезные команды/Полезные команды.md",
-    "Ulbi Course Урок 34/Ulbi Course Урок 34.md",
     "Ulbi Course Урок 34/imgs/Pasted image 20241120171830.png",
-    "Ulbi Course Урок 34/imgs/Pasted image 20241120171804.png",
-    "Ulbi Course Урок 34/imgs/Pasted image 20241120171723.png",
-    "Ulbi Course Урок 34/imgs/Pasted image 20241120171610.png",
-    "Ulbi Course Урок 34/imgs/Pasted image 20241120171446.png",
-    "Ulbi Course Урок 34/imgs/Pasted image 20241120171353.png",
-    "Ulbi Course Урок 34/imgs/Pasted image 20241120171321.png",
-    "Ulbi Course Урок 34/imgs/Pasted image 20241120171223.png",
-    "Ulbi Course Урок 34/imgs/Pasted image 20241120171130.png",
-    "Ulbi Course Урок 34/imgs/Pasted image 20241120170945.png",
     "Ulbi Course Урок 25/Ulbi Course Урок 25.md",
     "WTF_is_a/WTF_is_a_typePrefix/WTF_is_a_typePrefix.md",
     "WTF_is_a/WTF_is_a_typePrefix/imgs",
@@ -380,7 +406,6 @@
     "snippets/test (TS + JS).md",
     "Ulbi Course Урок 32/imgs",
     "Ulbi Course Урок 31 1/Ulbi Course Урок 31 1.md",
-    "Ulbi Course Урок 32",
     "Ulbi Course Урок 31/Ulbi Course Урок 31.md",
     "Ulbi Course Урок 30/Ulbi Course Урок 30.md",
     "Ulbi Course Урок 29/Ulbi Course Урок 29.md",

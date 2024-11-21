@@ -33,6 +33,182 @@ Ulbi посчитал, что в модалке кнпока "Войти" выг
 
 После иморта его build'а также осталась проблема
 
+![[its-time-to-328386ada8.jpg|350]]
+
+Now, what we'z finna ter do is add dis shiet:
+
+```TSX:
+const computedClassNames = classNames(cls.Button, mods, [className]);  
+  
+console.log('Generated class names:', computedClassNames);
+```
+
+to us' `Button.tsx` component so it look like dis:
+
+```TSX:
+export const Button: FC<ButtonProps> = (props) => {  
+    const {  
+        className,  
+        children,  
+        theme,  
+        square,  
+        size = ButtonSize.M,  
+        ...otherProps  
+    } = props;  
+  
+    const mods: Record<string, boolean> = {  
+        [cls[theme]]: true,  
+        [cls.square]: square,  
+        [cls[size]]: true,  
+    };  
+  
+    const computedClassNames = classNames(cls.Button, mods, [className]);  
+  
+    console.log('Generated class names:', computedClassNames);  
+  
+    return (  
+        <button  
+            type="button"  
+            className={classNames(cls.Button, mods, [className])}  
+            {...otherProps}  
+        >  
+            {children}  
+        </button>  
+    );  
+};
+```
+
+Now, when we clickz on dat 'Login' btn shiet, tha window be poppin up like dis:
+
+![[Pasted image 20241121113232.png|350]]
+
+But we also b seein dem logz in da console:
+
+![[Pasted image 20241121113305.png]]
+
+Now, the `undefined` in our console might mean that `cls[theme]` is not resolving correctly, which implies that the `theme` prop (`ButtonTheme.OUTLINE`) either:
+- ain't passed down correctly from the parent component (`LoginForm.tsx`)
+- Doesn't map to a valid key in the `Button.module.scss` file
+
+What I ended up doing was adding this line:
+
+```TSX:
+console.log('Button theme prop:', theme);
+```
+
+To my `Button.tsx` component and sure enough I got:
+
+```BASH:
+Button theme prop: undefined
+```
+
+out in the logs as I was expecting
+
+Now, I done switched to `Claude` and the problem got resolved in a matter of 2 minutes. Here's the new `Button.tsx` component:
+
+```TSX:
+import { classNames } from 'shared/lib/classNames/classNames';  
+import { ButtonHTMLAttributes, FC } from 'react';  
+import cls from './Button.module.scss';  
+  
+export enum ButtonTheme {  
+    CLEAR = 'clear',  
+    CLEAR_INVERTED = 'clearInverted',  
+    OUTLINE = 'outline',  
+    BACKGROUND = 'background',  
+    BACKGROUND_INVERTED = 'backgroundInverted',  
+}  
+  
+export enum ButtonSize {  
+    M = 'size_m',  
+    L = 'size_l',  
+    XL = 'size_xl',  
+}  
+  
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {  
+    className?: string;  
+    theme?: ButtonTheme;  
+    square?: boolean;  
+    size?: ButtonSize;  
+}  
+  
+export const Button: FC<ButtonProps> = (props) => {  
+    const {  
+        className,  
+        children,  
+        theme = ButtonTheme.OUTLINE,  
+        square,  
+        size = ButtonSize.M,  
+        ...otherProps  
+    } = props;  
+  
+    const buttonClasses = [  
+        cls.Button,  
+        theme && cls[theme],  
+        square && cls.square,  
+        cls[size],  
+        className,  
+    ].filter(Boolean).join(' ');  
+  
+    return (  
+        <button  
+            type="button"  
+            className={buttonClasses}  
+            {...otherProps}  
+        >  
+            {children}  
+        </button>  
+    );  
+};
+```
+
+Now, what's going down here is we force-apply this `OUTLINE` thing to our `theme`:
+
+```TSX:
+theme = ButtonTheme.OUTLINE,
+```
+
+But that would make any other button render with that style which is not a desired behavior, to say the least
+
+Now, the workaround here is that we updated the `mods` object to use a different approach that doesn't rely on the `Record<string, boolean>` type. So, we're making a switch from `mods` to `buttonClasses`:
+
+> before:
+
+```TSX:
+const mods: Record<string, boolean> = {
+    [cls[theme]]: true,
+    [cls.square]: square,
+    [cls[size]]: true,
+};
+```
+
+> after:
+
+```TSX:
+const buttonClasses = [  
+    cls.Button,  
+    theme && cls[theme],  
+    square && cls.square,  
+    cls[size],  
+    className,  
+].filter(Boolean).join(' ');
+```
+
+Now, if we add this line back to our `Button.tsx`:
+
+```TSX:
+console.log('Button theme prop:', theme);
+```
+
+we finna see dat fry in da bag now:
+
+![[Pasted image 20241121120458.png]]
+
+Which implies that we passed down it all correctly
+
+![[Pasted image 20241121122322.png|400]]
+
+Now, I ain't really got no fucking idea why in the actual fuck not only my project but also the one that I downloaded as an attachment would not work whereas in fact I be doing the same shit he did 
 
 >`loginSchema.ts`:
 
@@ -58,7 +234,27 @@ TS сразу говорит о том, что мы пропустили обя�
 
 ![[Pasted image 20241120122741.png]]
 
+>`loginSlice.ts`:
 
+```TSX:
+import { createSlice } from '@reduxjs/toolkit';  
+import { LoginSchema } from '../types/loginSchema';  
+  
+const initialState: LoginSchema = {  
+    isLoading: false,  
+    username: '',  
+    password: '',  
+};  
+  
+export const loginSlice = createSlice({  
+    name: 'login',  
+    initialState,  
+    reducers: {},  
+});  
+  
+export const { actions: loginActions } = loginSlice;  
+export const { reducer: loginReducer } = loginSlice;
+```
 
 Терь сделаем 2 `reducer`'а -- это те, с помощью которых будем менять `username` и `пароль`
 
@@ -81,7 +277,57 @@ TS сразу говорит о том, что мы пропустили обя�
 
 ![[Pasted image 20241120151924.png]]
 
+>`LoginForm.tsx`:
 
+```TSX:
+import { classNames } from 'shared/lib/classNames/classNames';  
+import { useTranslation } from 'react-i18next';  
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';  
+import { Input } from 'shared/ui/input/Input';  
+import { useDispatch } from 'react-redux';  
+import { useCallback } from 'react';  
+import { loginActions } from '../../model/slice/loginSlice';  
+import cls from './LoginForm.module.scss';  
+  
+interface LoginFormProps {  
+    className?: string;  
+}  
+  
+export const LoginForm = ({ className }: LoginFormProps) => {  
+    const { t } = useTranslation();  
+  
+    // console.log('ButtonTheme.OUTLINE:', ButtonTheme.OUTLINE);  
+    const dispatch = useDispatch();  
+  
+    const onChangeUsername = useCallback((value: string) => {  
+        dispatch(loginActions.setUsername(value));  
+    }, [dispatch]);  
+  
+    const onChangePassword = useCallback((value: string) => {  
+        dispatch(loginActions.setPassword(value));  
+    }, [dispatch]);  
+  
+    return (  
+        <div className={classNames(cls.LoginForm, {}, [className])}>  
+            <Input                autofocus  
+                type="text"  
+                className={cls.input}  
+                placeholder={t('Введите username')}  
+                onChange={onChangeUsername}  
+            />  
+            <Input                type="text"  
+                className={cls.input}  
+                placeholder={t('Введите Пароль')}  
+                onChange={onChangePassword}  
+            />  
+            <Button                theme={ButtonTheme.OUTLINE}  
+                className={cls.loginBtn}  
+            >  
+                {t('Войти')}  
+            </Button>  
+        </div>    );  
+};
+```
 ##### С изменением данных мы разобрались, но никакое `value` мы пока в `input` не передаём
 
 ![[Pasted image 20241120152026.png]]
@@ -114,6 +360,18 @@ TS сразу говорит о том, что мы пропустили обя�
 >`index.ts`:
 
 ![[Pasted image 20241120152408.png]]
+
+>`index.ts`:
+
+```TSX:
+// @ts-ignore  
+export { LoginModal } from './ui/LoginModal/LoginModal';  
+export { LoginSchema } from '../model/types/loginSchema';
+```
+
+(потратил 10 минут на проверку импортов и экспротов, чтобы потом понять, что сначала нужно подняться на один уровень через `../`)
+
+P.S.S.: всё-таки дошло, что `index.ts` должен быть на уровне `./AuthByUsername` (внутри этой папки)
 
 Далее откроем корневой интерфейс `StateSchema`:
 
@@ -161,6 +419,13 @@ TS сразу говорит о том, что мы пропустили обя�
 
 И в данном селекторе мы возвращаем весь `state`, который отвечает за нашу форму
 
+>`getLoginState.ts`:
+
+```TSX:
+import { StateSchema } from 'app/providers/StoreProvider';  
+  
+export const getLoginState = (state: StateSchema) => state?.loginForm;
+```
 
 #### Терь вернёмся к компоненту `LoginForm`, где этим селектором воспользуемся
 
@@ -190,7 +455,11 @@ Ulbi решает вместо обращения через точку, дес�
 
 ![[Pasted image 20241120154948.png]]
 
+Щас опять ебаное полотно ошибок (это уже после исправлений):
 
+![[Pasted image 20241121153921.png]]
+
+(Мне похуй, я на крестик нажимаю)
 #### Теперь реализуем логику нажатия на кнопку:
 
 ![[Pasted image 20241120155157.png]]
@@ -242,6 +511,21 @@ npm i axios
 
 ![[Pasted image 20241120160406.png]]
 
+>`loginByUsername`:
+
+```TSX:
+import { createAsyncThunk } from '@reduxjs/toolkit';  
+import axios from 'axios';  
+  
+const loginByUsername = createAsyncThunk(  
+    'login/loginByUsername',  
+    async (userId, thunkAPI) => {  
+        const response = await axios.post('http://localhost:8000/');  
+        return response.data;  
+    },  
+);
+```
+
 Теперь нам ещё нужен пароль и логин. На это у нас два варианта -- либо доставать их напрямую из `state`'а, либо получать аргументами
 
 Попробуем получать данные извне в виде аргументов. Для этого создадим отдельный интерфейс, в котором опишем типы, которые мы ожидаем на вход -- это `username` и `пароль` типа `string`
@@ -282,13 +566,57 @@ npm i axios
 
 Т.е. объект `authData` передаём напрямую, как тело запроса
 
+>`loginByUsername.ts`:
+
+```TSX:
+import { createAsyncThunk } from '@reduxjs/toolkit';  
+import axios from 'axios';  
+import { User } from 'entities/User';  
+  
+interface LoginByUsernameProps {  
+    username: string;  
+    password: string;  
+}  
+  
+const loginByUsername = createAsyncThunk<User, LoginByUsernameProps>(  
+    'login/loginByUsername',  
+    async (authData, thunkAPI) => {  
+        const response = await axios.post('http://localhost:8000/login', authData);  
+        return response.data;  
+    },  
+);
+```
+
 В запрсое может возникнуть какая-нить ошибка, поэтому обернём ещё в `try/catch`-блок нащ запрос
 
 >`loginByUsername`:
 
 ![[Pasted image 20241120161310.png]]
 
+>`loginByUsername.ts`:
 
+```TSX:
+import { createAsyncThunk } from '@reduxjs/toolkit';  
+import axios from 'axios';  
+import { User } from 'entities/User';  
+  
+interface LoginByUsernameProps {  
+    username: string;  
+    password: string;  
+}  
+  
+const loginByUsername = createAsyncThunk<User, LoginByUsernameProps>(  
+    'login/loginByUsername',  
+    async (authData, thunkAPI) => {  
+        try {  
+            const response = await axios.post('http://localhost:8000/login', authData);  
+            return response.data;  
+        } catch (e) {  
+            console.log(e);  
+        }  
+    },  
+);
+```
 #### Как обрабатывать ошибки?
 
 Вот это в [документации](https://redux-toolkit.js.org/api/createAsyncThunk#handling-thunk-errors): 
@@ -410,6 +738,11 @@ npm i axios
 ![[1649961167_new_preview_AazteDO9pVU.png|300]]
 
 ![[Pasted image 20241120170007.png]]
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Тут я умер
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 У нас щас оно красным подсвечивает `loginByUsername`, что нет импорта. Импортировать тоже мы щас хуй импортируем, потому что нет экспорта
