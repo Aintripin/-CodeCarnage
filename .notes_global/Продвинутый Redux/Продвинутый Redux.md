@@ -35,7 +35,7 @@ npm start
 
 ![[Pasted image 20241122105929.png|550]]
 
-Когда исползуем RTK, нет нужны подключать инструменты разработчика для отладки, а также Redux Thunk (middleware), поскольку всё это идёт уже из коробки
+Когда используем RTK, нет нужны подключать инструменты разработчика для отладки, а также Redux Thunk (middleware), поскольку всё это идёт уже из коробки
 
 Далее в качестве `reducer`'а указывается корневой reducer
 
@@ -45,7 +45,7 @@ npm start
 
 ![[Pasted image 20241122110455.png]]
 
-Далее нам понадобятся некоторые типы, с поомщью которых мы будем с нашим хранилищем взаимодействовать 
+Далее нам понадобятся некоторые типы, с помощью которых мы будем с нашим хранилищем взаимодействовать 
 
 
 1. Сначала получаем тип нашего состояния:
@@ -76,7 +76,25 @@ export type AppDispatch = AppStore['dispatch']
 
 -- это три базовых типа
 
+>`store.ts`:
 
+```TSX:
+import {combineReducers, configureStore} from "@reduxjs/toolkit";  
+  
+const rootReducer = combineReducers({  
+  
+})  
+  
+export const setupStore = () => {  
+    return configureStore({  
+        reducer: rootReducer,  
+    })  
+};  
+  
+export type RootState = ReturnType<typeof rootReducer>;  
+export type AppStore = ReturnType<typeof setupStore>;  
+export type AppDispatch = AppStore['dispatch'];
+```
 
 ### Нам понадобятся некоторые хуки для работы с Redux
 
@@ -100,6 +118,14 @@ export type AppDispatch = AppStore['dispatch']
 
 ![[Pasted image 20241122114712.png]]
 
+```TSX:
+import {TypedUseSelectorHook, useDispatch, useSelector} from "react-redux";  
+import {AppDispatch, RootState} from "../store/store";  
+  
+export const useAppDispatch = () => useDispatch<AppDispatch>();  
+export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
+```
+
 ---
 ---
 ## What's going down?
@@ -113,7 +139,7 @@ Think of it like this:
 - **`useSelector`**: A general store clerk who doesn’t know what’s on the shelves. You have to explain what you want every time.
 - **`useAppSelector`**: A store clerk who knows everything in your store (because you told them with `<RootState>`), so you don’t have to repeat yourself.
 
-You made it by doing this:
+We made it by doing this:
 
 ```TSX:
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
