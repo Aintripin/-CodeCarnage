@@ -165,28 +165,36 @@
             "id": "d979408933c915cb",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Продвинутый Redux/Продвинутый Redux.md",
-                "mode": "source",
-                "source": false
+                "file": "Продвинутый Redux/imgs/Pasted image 20241122115311.png"
               },
-              "icon": "lucide-file",
-              "title": "Продвинутый Redux"
+              "icon": "lucide-image",
+              "title": "Pasted image 20241122115311"
             }
           },
           {
-            "id": "00d6a1742a06c81a",
+            "id": "07479d7280409446",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Ulbi Course Урок 26/Ulbi Course Урок 26.md",
-                "mode": "source",
-                "source": false
+                "file": "Продвинутый Redux/imgs/Pasted image 20241122115208.png"
               },
-              "icon": "lucide-file",
-              "title": "Ulbi Course Урок 26"
+              "icon": "lucide-image",
+              "title": "Pasted image 20241122115208"
+            }
+          },
+          {
+            "id": "61ec90d987617f29",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Продвинутый Redux/imgs/Pasted image 20241122115311.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20241122115311"
             }
           },
           {
@@ -195,12 +203,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ulbi Course Урок 27/Ulbi Course Урок 27.md",
+                "file": "WTF_is_a/WTF_is_a_Reducer/WTF_is_a_Reducer.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Ulbi Course Урок 27"
+              "title": "WTF_is_a_Reducer"
             }
           },
           {
@@ -223,16 +231,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docker config.md",
+                "file": "Продвинутый Redux/Продвинутый Redux.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "docker config"
+              "title": "Продвинутый Redux"
             }
           }
         ],
-        "currentTab": 12
+        "currentTab": 17
       }
     ],
     "direction": "vertical"
@@ -373,24 +381,29 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d979408933c915cb",
+  "active": "3914c72e179fd3eb",
   "lastOpenFiles": [
-    "Продвинутый Redux/imgs/Pasted image 20241121175453.png",
-    "Продвинутый Redux/imgs",
-    "Ulbi Course Урок 34/imgs/Pasted image 20241121153921.png",
+    "docker config.md",
+    "Ulbi Course Урок 27/Ulbi Course Урок 27.md",
+    "WTF_is_a/WTF_is_a_Reducer/WTF_is_a_Reducer.md",
     "Продвинутый Redux/Продвинутый Redux.md",
+    "Продвинутый Redux/imgs/Pasted image 20241122115311.png",
+    "Ulbi Course Урок 26/Ulbi Course Урок 26.md",
+    "WTF_is_a/WTF_is_a_Reducer/imgs/wtf_is_a_REDUCER___v000.png",
+    "WTF_is_a/WTF_is_a_Reducer/imgs",
+    "WTF_is_a/WTF_is_a_Reducer",
+    "Продвинутый Redux/imgs/Pasted image 20241122115208.png",
+    "Продвинутый Redux/imgs/Pasted image 20241122114712.png",
+    "Продвинутый Redux/imgs/Pasted image 20241122111808.png",
+    "Продвинутый Redux/imgs/Pasted image 20241122111540.png",
+    "Продвинутый Redux/imgs/Pasted image 20241122111129.png",
+    "Продвинутый Redux/imgs/Pasted image 20241122110455.png",
+    "Продвинутый Redux/imgs/Pasted image 20241122105929.png",
+    "Продвинутый Redux/imgs/Pasted image 20241122101549.png",
+    "Продвинутый Redux/imgs",
     "Ulbi Course Урок 34/Ulbi Course Урок 34.md",
     "Продвинутый Redux",
-    "Ulbi Course Урок 34/imgs/Pasted image 20241121122322.png",
-    "Ulbi Course Урок 34/imgs/5eaed0a10ee69e106af5ae67_diz6_gxnlew9of97gl1xri-wfd682mdq5zhpj-9oouzrettu01xkbyclxvlnq4-mz2yokn1ewtr-7gvn0qj75copeiljyra2xggwrqtdz7u_uwutufmz4_3tqj_fy28od7kh4lb2-1.webp",
-    "Ulbi Course Урок 34/imgs/5eaed0a10ee69e106af5ae67_diz6_gxnlew9of97gl1xri-wfd682mdq5zhpj-9oouzrettu01xkbyclxvlnq4-mz2yokn1ewtr-7gvn0qj75copeiljyra2xggwrqtdz7u_uwutufmz4_3tqj_fy28od7kh4lb2.webp",
-    "Ulbi Course Урок 34/imgs/Pasted image 20241121120458.png",
-    "Ulbi Course Урок 34/imgs/Pasted image 20241121113305.png",
-    "Ulbi Course Урок 34/imgs/Pasted image 20241121113232.png",
-    "Ulbi Course Урок 34/imgs/its-time-to-328386ada8.jpg",
-    "Ulbi Course Урок 34/imgs/Pasted image 20241120175105.png",
     "Полезные команды/Полезные команды.md",
-    "Ulbi Course Урок 34/imgs/Pasted image 20241120171830.png",
     "Ulbi Course Урок 25/Ulbi Course Урок 25.md",
     "WTF_is_a/WTF_is_a_typePrefix/WTF_is_a_typePrefix.md",
     "WTF_is_a/WTF_is_a_typePrefix/imgs",
@@ -401,9 +414,7 @@
     "Ulbi Course Урок 34",
     "Ulbi Course Урок 33/imgs",
     "Ulbi Course Урок 32/Ulbi Course Урок 32.md",
-    "Ulbi Course Урок 33",
     "snippets/rc (create react component).md",
-    "snippets/imgs",
     "snippets/test (TS + JS).md",
     "Ulbi Course Урок 31 1/Ulbi Course Урок 31 1.md",
     "Ulbi Course Урок 31/Ulbi Course Урок 31.md",
@@ -412,10 +423,7 @@
     "Ulbi Course Урок 24/Ulbi Course Урок 24.md",
     "Ulbi Course Урок 28/Ulbi Course Урок 28.md",
     "Ulbi Course Урок 20/Ulbi Course Урок 20.md",
-    "docker config.md",
-    "Ulbi Course Урок 27/Ulbi Course Урок 27.md",
     "CI CD pipeline/CI CD Pipeline.md",
-    "Ulbi Course Урок 26/Ulbi Course Урок 26.md",
     "Ulbi Course Урок 22/Ulbi Course Урок 22.md",
     "Ulbi Course Урок 21/Ulbi Course Урок 21.md",
     "Ulbi Course Урок 23/Ulbi Course Урок 23.md"
