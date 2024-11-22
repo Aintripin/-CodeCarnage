@@ -218,7 +218,12 @@ This is how the **big pizza (root state)** gets its recipe from the **individual
 
 Пока что посмотреть по `reducer`'ам нельзя, просто потому что мы ещё ни один не сделали 
 
+---
 ### For an unparalleled, earth-shattering deep dive into the Reducers topic, by all means, click this link  [WTF is a Reducer?!](../WTF_is_a/WTF_is_a_Reducer/WTF_is_a_Reducer.md)
 
+---
 
+В общем, нет у нас `reducer`'ов, щас воткнём:
+
+5:16
 
