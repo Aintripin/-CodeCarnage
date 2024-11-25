@@ -327,6 +327,11 @@ This is how the **big pizza (root state)** gets its recipe from the **individual
 
 Мы это всё делали с `useAppSelector`, чтобы каждый раз не указывать типы и не импортировать эти типы 
 
+Сделаем `IUser`, где определим, какие поля у каждого пользователя будут:
+
+>`IUser.ts:
+
+![[Pasted image 20241125111901.png]]
 ### Время пилить функционал
 
 В качестве примера, сделаем счётчик:
@@ -402,6 +407,8 @@ This is how the **big pizza (root state)** gets its recipe from the **individual
 
 Получаем объект, у которого есть `type` и `payload`
 
+![[Pasted image 20241125110013.png]]
+
 Т.е. это самый обыкновенный redux'овский action 
 
 
@@ -448,6 +455,8 @@ This is how the **big pizza (root state)** gets its recipe from the **individual
 
 Функцию сделаем `async`-хронной, чтобы могли использовать `await`
 
+![[Pasted image 20241125112038.png|300]]
+
 >`ActionCreator.ts`:
 
 ![[Pasted image 20241122175027.png]]
@@ -468,7 +477,7 @@ This is how the **big pizza (root state)** gets its recipe from the **individual
 
 ![[Pasted image 20241122180731.png]]
 
-В первом случае флаг `isLoading` ставим на `true` -- т.е. они грузяься
+В первом случае флаг `isLoading` ставим на `true` -- т.е. они грузятся
 
 Во втором и третьем - она уже закончилась:
 
@@ -490,6 +499,71 @@ This is how the **big pizza (root state)** gets its recipe from the **individual
 
 ![[Pasted image 20241122181227.png]]
 
+```TSX:
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";  
+import {IUser} from "../../models/IUser";  
+  
+interface UserState {  
+    users: IUser[];  
+    isLoading: boolean;  
+    error: string;  
+    count: number;  
+}  
+  
+const initialState: UserState = {  
+    users: [],  
+    isLoading: false,  
+    error: '',  
+    count: 0,  
+}  
+  
+  
+export const userSlice = createSlice({  
+    name: 'user',  
+    initialState,  
+    reducers: {  
+        // increment(state, action: PayloadAction<number>) {  
+        //     state.count += action.payload;        // }        usersFetching(state) {  
+            state.isLoading = true;  
+        },  
+        usersFetchingSuccess(state, action: PayloadAction<IUser[]>) {  
+            state.isLoading = false;  
+            state.error = '';  
+            state.users = action.payload;  
+        },  
+        usersFetchingError(state, action: PayloadAction<string>) {  
+            state.isLoading = false;  
+            state.error = action.payload;  
+        }  
+    }  
+})  
+  
+export default userSlice.reducer;
+```
 
-14:24s
+
+
+>`ActionCreators.ts`:
+
+```TSX:
+import {AppDispatch} from "../store";  
+import {userSlice} from "./UserSlice";  
+import {IUser} from "../../models/IUser";  
+import axios from "axios";  
+  
+export const fetchUsers = () => async (dispatch: AppDispatch) => {  
+    try {  
+        dispatch(userSlice.actions.usersFetching());  
+        const response = await axios.get<IUser[]>('https://jsonplaceholder.typicode.com/users');  
+        dispatch(userSlice.actions.usersFetchingSuccess(response.data));  
+    } catch (e) {  
+        dispatch(userSlice.actions.usersFetchingError(e.message))  
+    }  
+}
+```
+
+
+Now, at this point this shit be wildin so I skated
+
+15:18
 

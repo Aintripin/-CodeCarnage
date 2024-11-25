@@ -53,14 +53,29 @@
             "id": "cff45c3861db8728",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Продвинутый Redux/Продвинутый Redux.md",
-                "mode": "source",
-                "source": false
+                "file": "Продвинутый Redux/imgs/Pasted image 20241125111901.png"
               },
-              "icon": "lucide-file",
-              "title": "Продвинутый Redux"
+              "icon": "lucide-image",
+              "title": "Pasted image 20241125111901"
+            }
+          },
+          {
+            "id": "ccbc2d33b71f576c",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Redux Advanced Tutorial (Dave Gray)/Advanced_Redux_Dave.canvas",
+                "viewState": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 0
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Advanced_Redux_Dave"
             }
           },
           {
@@ -268,7 +283,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -409,20 +424,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cff45c3861db8728",
+  "active": "91e6b6c3608a4dfa",
   "lastOpenFiles": [
-    "Продвинутый Redux/imgs/Pasted image 20241122181227.png",
+    "Продвинутый Redux/imgs/Pasted image 20241125112038.png",
+    "Redux Advanced Tutorial (Dave Gray)/Advanced_Redux_Dave.canvas",
+    "Redux Advanced Tutorial (Dave Gray)",
+    "Продвинутый Redux/imgs/Pasted image 20241125111901.png",
     "Продвинутый Redux/Продвинутый Redux.md",
+    "Продвинутый Redux/imgs/Pasted image 20241125110013.png",
+    "Продвинутый Redux/imgs/Pasted image 20241122181227.png",
     "Продвинутый Redux/imgs/Pasted image 20241122181055.png",
     "Продвинутый Redux/imgs/Pasted image 20241122180838.png",
     "Продвинутый Redux/imgs/Pasted image 20241122180731.png",
     "Продвинутый Redux/imgs/Pasted image 20241122175027.png",
     "Продвинутый Redux/imgs/Pasted image 20241122174832.png",
     "Продвинутый Redux/imgs/Pasted image 20241122171702.png",
-    "Продвинутый Redux/imgs/Pasted image 20241122161057.png",
     "WTF_is_a/WTF_is_an_Action_Creator/WTF_is_an_Action_Creator.md",
-    "WTF_is_a/WTF_is_an_Action_Creator/imgs/wtf_is_an_ACTION_CREATOR___v000.png",
-    "Продвинутый Redux/imgs/Pasted image 20241122160411.png",
     "WTF_is_a/WTF_is_an_Action_Creator/imgs",
     "WTF_is_a/WTF_is_an_Action_Creator",
     "WTF_is_a/WTF_is_a_Slice/WTF_is_a_Slice.md",
@@ -441,7 +458,6 @@
     "WTF_is_a/WTF_is_a_Reducer",
     "Продвинутый Redux/imgs",
     "Ulbi Course Урок 34/Ulbi Course Урок 34.md",
-    "Продвинутый Redux",
     "Ulbi Course Урок 25/Ulbi Course Урок 25.md",
     "WTF_is_a/WTF_is_a_typePrefix/WTF_is_a_typePrefix.md",
     "Ulbi Course Урок 33/Ulbi Course Урок 33.md",
