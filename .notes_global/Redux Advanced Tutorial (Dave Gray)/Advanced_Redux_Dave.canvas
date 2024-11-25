@@ -1,6 +1,6 @@
 {
 	"nodes":[
-		{"id":"56cd3a4a65d6a2ad","type":"group","x":1516,"y":3280,"width":5805,"height":3820,"label":"Endpoints and shit"},
+		{"id":"56cd3a4a65d6a2ad","type":"group","x":1516,"y":3280,"width":8204,"height":3820,"label":"Endpoints and shit"},
 		{"id":"4d9278a8e35aecc6","type":"group","x":3120,"y":3560,"width":1941,"height":3190,"label":"WHY THE FUCK IS AN ENDPOINT"},
 		{"id":"b733ebc3a0880957","type":"group","x":1560,"y":3558,"width":1280,"height":3522,"label":"WHAT THE FUCK IS AN ENDPOINT"},
 		{"id":"99b12ed18a7e0a56","type":"group","x":-1100,"y":-311,"width":2570,"height":1339,"color":"#319685","label":"Setting up `json-server`"},
@@ -94,7 +94,18 @@
 		{"id":"5f54ba8c459e90de","type":"text","text":"now that we declared our extended slice thing, time to fill it up with some logic","x":-631,"y":4580,"width":359,"height":80,"color":"2"},
 		{"id":"6dad0b4ec326c862","type":"file","file":"Redux Advanced Tutorial (Dave Gray)/imgs/Pasted image 20241125173234.png","x":-2100,"y":3740,"width":891,"height":541},
 		{"id":"acdc79c7df708884","type":"text","text":"### `transformResponse`","x":-2740,"y":4120,"width":285,"height":60,"color":"5"},
-		{"id":"97d6b00158df0568","x":-2970,"y":4240,"width":746,"height":480,"type":"text","text":"`transformResponse` is a function that allows you to transform the raw API response data before it's stored in the Redux store.\n\nIn this case, the `transformResponse` function:\n\n1. Extracts the `responseData` from the API response.\n2. Creates a new `loadedPosts` array by mapping over the `responseData`.\n3. Performs some additional transformations on the `post` objects, like converting the `date` field and processing the `reactions` field.\n\nThis gives you full control over how the API data is structured and normalized before it's stored in the Redux state.\n\nThe key points are:\n\n- `transformResponse` lets you customize the response data\n- `responseData` is the raw data from the API\n- The transformed `loadedPosts` array is what gets stored in Redux"}
+		{"id":"97d6b00158df0568","type":"text","text":"`transformResponse` is a function that allows you to transform the raw API response data before it's stored in the Redux store.\n\nIn this case, the `transformResponse` function:\n\n1. Extracts the `responseData` from the API response.\n2. Creates a new `loadedPosts` array by mapping over the `responseData`.\n3. Performs some additional transformations on the `post` objects, like converting the `date` field and processing the `reactions` field.\n\nThis gives you full control over how the API data is structured and normalized before it's stored in the Redux state.\n\nThe key points are:\n\n- `transformResponse` lets you customize the response data\n- `responseData` is the raw data from the API\n- The transformed `loadedPosts` array is what gets stored in Redux","x":-2970,"y":4240,"width":746,"height":480},
+		{"id":"33a2a7a8481a57a5","type":"text","text":"# [Anatomy of an Endpoint](https://redux-toolkit.js.org/rtk-query/api/createApi#anatomy-of-an-endpoint)","x":7881,"y":3534,"width":519,"height":106,"color":"5"},
+		{"id":"48de0a538072151a","type":"file","file":"Redux Advanced Tutorial (Dave Gray)/imgs/Pasted image 20241125175040.png","x":8324,"y":3920,"width":1049,"height":360},
+		{"id":"55298819d01e0685","type":"text","text":"# `query`","x":7960,"y":3720,"width":264,"height":100},
+		{"id":"9cc8ec99d7b13591","type":"text","text":"# `queryFn`","x":7979,"y":4440,"width":227,"height":100},
+		{"id":"f39740d6749b4bfd","type":"file","file":"Redux Advanced Tutorial (Dave Gray)/imgs/Pasted image 20241125175153.png","x":8324,"y":4820,"width":1049,"height":586},
+		{"id":"73b6814265d59d8a","x":7979,"y":6040,"width":415,"height":135,"type":"text","text":"# `transformResponse`"},
+		{"id":"164014194127f0f3","x":8324,"y":6480,"width":1131,"height":160,"type":"file","file":"Redux Advanced Tutorial (Dave Gray)/imgs/Pasted image 20241125175357.png"},
+		{"id":"b86df25462755d53","type":"text","text":"_(required if no `query` provided)_\n\nCalled with the same arguments as `baseQuery`, as well as the provided `baseQuery` function itself. It is expected to return an object with either a `data` or `error` property, or a promise that resolves to return such an object.","x":8424,"y":4560,"width":849,"height":169},
+		{"id":"cbf4f850f5600e82","type":"file","file":"Redux Advanced Tutorial (Dave Gray)/imgs/Pasted image 20241125175227.png","x":8324,"y":5520,"width":1058,"height":320},
+		{"id":"128d021dd7466779","x":8361,"y":6240,"width":1058,"height":120,"type":"text","text":"In some cases, you may want to manipulate the data returned from a query before you put it in the cache. In this instance, you can take advantage of `transformResponse`."},
+		{"id":"a184331a896f51c4","x":8254,"y":3340,"width":250,"height":60,"type":"text","text":"### that's a LINK!"}
 	],
 	"edges":[
 		{"id":"b5d6dbcfd5e629be","fromNode":"5a8ab317b233f2f3","fromSide":"bottom","toNode":"66be20451c1b25a4","toSide":"left","color":"2"},
@@ -171,6 +182,16 @@
 		{"id":"8788563f1d265e79","fromNode":"8d6753e08e601b84","fromSide":"bottom","toNode":"5f54ba8c459e90de","toSide":"top"},
 		{"id":"1c3d4808b4b77279","fromNode":"5f54ba8c459e90de","fromSide":"left","toNode":"6dad0b4ec326c862","toSide":"right"},
 		{"id":"5a8e31d7e7b15366","fromNode":"6dad0b4ec326c862","fromSide":"left","toNode":"acdc79c7df708884","toSide":"top"},
-		{"id":"83d16529abd571d4","fromNode":"acdc79c7df708884","fromSide":"bottom","toNode":"97d6b00158df0568","toSide":"top"}
+		{"id":"83d16529abd571d4","fromNode":"acdc79c7df708884","fromSide":"bottom","toNode":"97d6b00158df0568","toSide":"top"},
+		{"id":"318cd052be84a5cf","fromNode":"55298819d01e0685","fromSide":"bottom","toNode":"48de0a538072151a","toSide":"left"},
+		{"id":"1be70bfb74d9274c","fromNode":"33a2a7a8481a57a5","fromSide":"left","toNode":"55298819d01e0685","toSide":"left"},
+		{"id":"4c58d98e3ac46480","fromNode":"9cc8ec99d7b13591","fromSide":"bottom","toNode":"f39740d6749b4bfd","toSide":"left"},
+		{"id":"035035a3706fd65d","fromNode":"33a2a7a8481a57a5","fromSide":"left","toNode":"9cc8ec99d7b13591","toSide":"left"},
+		{"id":"cc4144edea9da4d2","fromNode":"33a2a7a8481a57a5","fromSide":"left","toNode":"73b6814265d59d8a","toSide":"left"},
+		{"id":"bb7f6fd559918d90","fromNode":"73b6814265d59d8a","fromSide":"bottom","toNode":"164014194127f0f3","toSide":"left"},
+		{"id":"4395ef625b200709","fromNode":"f39740d6749b4bfd","fromSide":"top","toNode":"b86df25462755d53","toSide":"bottom"},
+		{"id":"878210a111e64ff2","fromNode":"f39740d6749b4bfd","fromSide":"bottom","toNode":"cbf4f850f5600e82","toSide":"top"},
+		{"id":"b0b98cedf09aa459","fromNode":"164014194127f0f3","fromSide":"top","toNode":"128d021dd7466779","toSide":"bottom"},
+		{"id":"de323635c5a29199","fromNode":"a184331a896f51c4","fromSide":"left","toNode":"33a2a7a8481a57a5","toSide":"top"}
 	]
 }

@@ -65,13 +65,49 @@
             "id": "ccbc2d33b71f576c",
             "type": "leaf",
             "state": {
+              "type": "image",
+              "state": {
+                "file": "Redux Advanced Tutorial (Dave Gray)/imgs/Pasted image 20241125175227.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20241125175227"
+            }
+          },
+          {
+            "id": "5a07dd460ac29d39",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Redux Advanced Tutorial (Dave Gray)/imgs/Pasted image 20241125175040.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20241125175040"
+            }
+          },
+          {
+            "id": "fcfd84fa0e462b07",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Redux Advanced Tutorial (Dave Gray)/imgs/Pasted image 20241125175227.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20241125175227"
+            }
+          },
+          {
+            "id": "9ca2d7367bb5b2a1",
+            "type": "leaf",
+            "state": {
               "type": "canvas",
               "state": {
                 "file": "Redux Advanced Tutorial (Dave Gray)/Advanced_Redux_Dave.canvas",
                 "viewState": {
-                  "x": -1822.0842562373714,
-                  "y": 4317.990393724437,
-                  "zoom": -0.3333333333333334
+                  "x": 8049.248716843056,
+                  "y": 6240.721110616331,
+                  "zoom": -1.718537013337684
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -283,7 +319,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -424,23 +460,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ccbc2d33b71f576c",
+  "active": "91e6b6c3608a4dfa",
   "lastOpenFiles": [
+    "Redux Advanced Tutorial (Dave Gray)/imgs/Pasted image 20241125175357.png",
+    "Redux Advanced Tutorial (Dave Gray)/imgs/Pasted image 20241125175040.png",
+    "Redux Advanced Tutorial (Dave Gray)/imgs/Pasted image 20241125175227.png",
+    "Redux Advanced Tutorial (Dave Gray)/imgs/Pasted image 20241125175153.png",
+    "Redux Advanced Tutorial (Dave Gray)/Advanced_Redux_Dave.canvas",
     "Redux Advanced Tutorial (Dave Gray)/imgs/Pasted image 20241125173234.png",
     "Redux Advanced Tutorial (Dave Gray)/imgs/wtf_is_an_ENDPOINT___v000.png",
     "Ulbi Course Урок 34/Ulbi Course Урок 34.md",
-    "Redux Advanced Tutorial (Dave Gray)/Advanced_Redux_Dave.canvas",
     "Redux Advanced Tutorial (Dave Gray)/imgs/Pasted image 20241125153712.png",
     "Redux Advanced Tutorial (Dave Gray)/imgs/Pasted image 20241125152552.png",
     "Redux Advanced Tutorial (Dave Gray)/imgs/Pasted image 20241125152040.png",
     "Продвинутый Redux/imgs/Pasted image 20241125112038.png",
     "Redux Advanced Tutorial (Dave Gray)/imgs/Pasted image 20241125150842.png",
-    "Redux Advanced Tutorial (Dave Gray)/imgs/Pasted image 20241125150656.png",
-    "Redux Advanced Tutorial (Dave Gray)/imgs/Pasted image 20241125145943.png",
     "Redux Advanced Tutorial (Dave Gray)/imgs",
-    "Redux Advanced Tutorial (Dave Gray)/imgs/Pasted image 20241125145236.png",
     "Redux Advanced Tutorial (Dave Gray)",
-    "Продвинутый Redux/imgs/Pasted image 20241125111901.png",
     "Продвинутый Redux/Продвинутый Redux.md",
     "WTF_is_a/WTF_is_an_Action_Creator/WTF_is_an_Action_Creator.md",
     "WTF_is_a/WTF_is_an_Action_Creator/imgs",
