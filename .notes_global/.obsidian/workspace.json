@@ -125,14 +125,17 @@
             "id": "d750ad24946fc282",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Ulbi Course Урок 34/Ulbi Course Урок 34.md",
-                "mode": "source",
-                "source": false
+                "file": "Ulbi Course Урок 35/Ulbi Course Урок 35.canvas",
+                "viewState": {
+                  "x": 46.78122093176377,
+                  "y": 613.0620468473098,
+                  "zoom": -0.333333333333333
+                }
               },
-              "icon": "lucide-file",
-              "title": "Ulbi Course Урок 34"
+              "icon": "lucide-layout-dashboard",
+              "title": "Ulbi Course Урок 35"
             }
           },
           {
@@ -483,17 +486,20 @@
   },
   "active": "d750ad24946fc282",
   "lastOpenFiles": [
-    "Ulbi Course Урок 34/imgs/Pasted image 20241128161945.png",
+    "Ulbi Course Урок 35/Ulbi Course Урок 35.md",
+    "Ulbi Course Урок 35/Ulbi Course Урок 35.canvas",
+    "Pasted image 20241129115212.png",
+    "Pasted image 20241129115033.png",
+    "Pasted image 20241129113952.png",
+    "arrow___v000.png",
+    "Pasted image 20241129113409.png",
+    "Pasted image 20241129113317.png",
+    "Pasted image 20241129112950.png",
+    "chain_link___v000___e9973f.png",
+    "Pasted image 20241129112546.png",
+    "Pasted image 20241129112358.png",
     "Ulbi Course Урок 34/Ulbi Course Урок 34.md",
-    "Ulbi Course Урок 34/imgs/Pasted image 20241128161812.png",
-    "Ulbi Course Урок 34/imgs/Pasted image 20241128161727.png",
-    "Ulbi Course Урок 34/imgs/Pasted image 20241128161514.png",
-    "Ulbi Course Урок 34/imgs/Pasted image 20241128161453.png",
-    "Ulbi Course Урок 34/imgs/Pasted image 20241128161413.png",
-    "Ulbi Course Урок 34/imgs/Pasted image 20241128161245.png",
-    "Ulbi Course Урок 34/imgs/Pasted image 20241128161128.png",
-    "Ulbi Course Урок 34/imgs/Pasted image 20241128161018.png",
-    "Ulbi Course Урок 34/imgs/Pasted image 20241128160823.png",
+    "Ulbi Course Урок 35",
     "Продвинутый Redux/Продвинутый Redux.md",
     "Redux Advanced Tutorial (Dave Gray)/Advanced_Redux_Dave.canvas",
     "Redux Advanced Tutorial (Dave Gray)/imgs",
@@ -514,7 +520,6 @@
     "Ulbi Course Урок 27/Ulbi Course Урок 27.md",
     "Ulbi Course Урок 26/Ulbi Course Урок 26.md",
     "WTF_is_a/WTF_is_a_Reducer/imgs",
-    "WTF_is_a/WTF_is_a_Reducer",
     "Ulbi Course Урок 25/Ulbi Course Урок 25.md",
     "WTF_is_a/WTF_is_a_typePrefix/WTF_is_a_typePrefix.md",
     "Ulbi Course Урок 33/Ulbi Course Урок 33.md",
@@ -527,7 +532,6 @@
     "Ulbi Course Урок 24/Ulbi Course Урок 24.md",
     "Ulbi Course Урок 28/Ulbi Course Урок 28.md",
     "Ulbi Course Урок 20/Ulbi Course Урок 20.md",
-    "CI CD pipeline/CI CD Pipeline.md",
-    "Ulbi Course Урок 22/Ulbi Course Урок 22.md"
+    "CI CD pipeline/CI CD Pipeline.md"
   ]
 }
