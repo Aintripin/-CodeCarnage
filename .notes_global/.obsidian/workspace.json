@@ -11,14 +11,17 @@
             "id": "30dfa3177627ac8a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Продвинутый Redux/Продвинутый Redux.md",
-                "mode": "source",
-                "source": false
+                "file": "Ulbi Course Урок 35/Ulbi Course Урок 35.canvas",
+                "viewState": {
+                  "x": 6245.373127852909,
+                  "y": 19355.662611765285,
+                  "zoom": -0.6666666666666667
+                }
               },
-              "icon": "lucide-file",
-              "title": "Продвинутый Redux"
+              "icon": "lucide-layout-dashboard",
+              "title": "Ulbi Course Урок 35"
             }
           },
           {
@@ -129,9 +132,9 @@
               "state": {
                 "file": "Ulbi Course Урок 35/Ulbi Course Урок 35.canvas",
                 "viewState": {
-                  "x": 1127.5979274743354,
-                  "y": 8465.165509660483,
-                  "zoom": -1
+                  "x": 2335.783974463976,
+                  "y": 13571.340404312929,
+                  "zoom": -0.9999999999999998
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -342,8 +345,7 @@
               "title": "WTF_is_a_Reducer"
             }
           }
-        ],
-        "currentTab": 9
+        ]
       }
     ],
     "direction": "vertical"
@@ -484,26 +486,29 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d750ad24946fc282",
+  "active": "30dfa3177627ac8a",
   "lastOpenFiles": [
-    "why_tf_is_this_happening___v000.png",
-    "Полезные команды/Полезные команды.md",
+    "Ulbi Course Урок 35/imgs/wtf_is_a_REDUCER_MANAGER___v000.png",
     "Ulbi Course Урок 35/Ulbi Course Урок 35.canvas",
-    "Ulbi Course Урок 35/imgs/finna_optimize___v000.png",
-    "Ulbi Course Урок 35/imgs/Pasted image 20241129103334.png",
-    "Ulbi Course Урок 35/imgs/Pasted image 20241129103710.png",
-    "Ulbi Course Урок 35/imgs/png-transparent-ampersand-symbol-logogram-typographic-ligature-symbol-miscellaneous-company-text.png",
+    "Ulbi Course Урок 35/imgs/Pasted image 20241130223926.png",
+    "Ulbi Course Урок 35/imgs/Pasted image 20241130223728.png",
+    "Ulbi Course Урок 35/imgs/Pasted image 20241130223634.png",
+    "Ulbi Course Урок 35/imgs/Pasted image 20241130223430.png",
+    "Ulbi Course Урок 35/imgs/Pasted image 20241130223239.png",
+    "Ulbi Course Урок 35/imgs/Pasted image 20241130222812.png",
+    "Ulbi Course Урок 35/imgs/Pasted image 20241130222623.png",
+    "Ulbi Course Урок 35/imgs/Pasted image 20241130222049.png",
+    "Ulbi Course Урок 35/imgs/Pasted image 20241130221832.png",
+    "Продвинутый Redux/Продвинутый Redux.md",
+    "WTF_is_a/WTF_is_a_Reducer/WTF_is_a_Reducer.md",
+    "Ulbi Course Урок 35/imgs/Pasted image 20241130221512.png",
+    "main_info/main.md",
+    "main_info",
+    "Полезные команды/Полезные команды.md",
     "Ulbi Course Урок 35/imgs",
     "Ulbi Course Урок 35/Ulbi Course Урок 35.md",
-    "Ulbi Course Урок 35/imgs/Pasted image 20241129115212.png",
-    "Ulbi Course Урок 35/imgs/Pasted image 20241129115033.png",
-    "Ulbi Course Урок 35/imgs/Pasted image 20241129113952.png",
-    "Ulbi Course Урок 35/imgs/arrow___v000.png",
-    "Ulbi Course Урок 35/imgs/Pasted image 20241129113409.png",
-    "Ulbi Course Урок 35/imgs/Pasted image 20241129113317.png",
     "Ulbi Course Урок 34/Ulbi Course Урок 34.md",
     "Ulbi Course Урок 35",
-    "Продвинутый Redux/Продвинутый Redux.md",
     "Redux Advanced Tutorial (Dave Gray)/Advanced_Redux_Dave.canvas",
     "Redux Advanced Tutorial (Dave Gray)/imgs",
     "Redux Advanced Tutorial (Dave Gray)",
@@ -515,9 +520,7 @@
     "Ulbi Course Урок 31/Ulbi Course Урок 31.md",
     "WTF_is_a/WTF_is_immer/imgs",
     "WTF_is_a/WTF_is_immer",
-    "WTF_is_a/WTF_is_a_Reducer/WTF_is_a_Reducer.md",
     "WTF_is_a/WTF_is_a_Slice/imgs",
-    "WTF_is_a/WTF_is_a_Slice",
     "Ulbi Course Урок 35/imgs/docker config.md",
     "Ulbi Course Урок 27/Ulbi Course Урок 27.md",
     "Ulbi Course Урок 26/Ulbi Course Урок 26.md",
@@ -532,7 +535,6 @@
     "Ulbi Course Урок 29/Ulbi Course Урок 29.md",
     "Ulbi Course Урок 24/Ulbi Course Урок 24.md",
     "Ulbi Course Урок 28/Ulbi Course Урок 28.md",
-    "Ulbi Course Урок 20/Ulbi Course Урок 20.md",
-    "CI CD pipeline/CI CD Pipeline.md"
+    "Ulbi Course Урок 20/Ulbi Course Урок 20.md"
   ]
 }
